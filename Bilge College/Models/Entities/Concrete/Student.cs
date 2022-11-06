@@ -2,11 +2,12 @@
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Bilge_College.Models.Entities.Concrete
 {
     public enum Gender { Male = 1, Female}
-    public enum Grade { I=1, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII }
+    public enum Grade {IX=1, X, XI, XII }
     public enum AStatus { Continues = 1, Frozen, Graduated }
     public class Student : BaseEntity
     {
@@ -17,6 +18,7 @@ namespace Bilge_College.Models.Entities.Concrete
         public string Email { get; set; }
         public string Password { get; set; }
         public string Image { get; set; }
+        [NotMapped]
         public IFormFile UploadImage { get; set; }
         public Grade Grade { get; set; }
         public int ClassroomId { get; set; }
@@ -25,9 +27,9 @@ namespace Bilge_College.Models.Entities.Concrete
         public School School { get; set; }
         public int AvarageScore { get; set; }
         public AStatus AttendanceStatus { get; set; }
-        public List<Parent> Parents { get; set; }
-        public List<Teacher> Teachers { get; set; }
-        public List<Subject> SubjectsList { get; set; }
+        public ICollection<Parent> Parents { get; set; }
+        public ICollection<SchoolReport> SchoolReports { get; set; }
         public int AbsentDay { get; set; }
+
     }
 }

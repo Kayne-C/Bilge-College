@@ -1,11 +1,9 @@
-﻿using Bilge_College.Models.Entities.Abstract;
-using Microsoft.AspNetCore.Http;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Bilge_College.Models.Entities.Concrete
+namespace Bilge_College.Models.DTOs
 {
-    public class Teacher : BaseEntity
+    public class AddInspectorDTO
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -14,10 +12,6 @@ namespace Bilge_College.Models.Entities.Concrete
         public string Image { get; set; }
         [NotMapped]
         public IFormFile UploadImage { get; set; }
-        public string Branch { get; set; }
         public string Duty { get; set; }
-        public ICollection<Classroom> Classrooms { get; set; }
-        public ICollection<SubSubject> SubSubjects { get; set; }
-
     }
 }

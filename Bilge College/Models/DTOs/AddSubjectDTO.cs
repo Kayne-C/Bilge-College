@@ -1,9 +1,9 @@
-﻿using Bilge_College.Models.Entities.Abstract;
+﻿using Bilge_College.Models.Entities.Concrete;
 using System.Collections.Generic;
 
-namespace Bilge_College.Models.Entities.Concrete
+namespace Bilge_College.Models.DTOs
 {
-    public class Subject : BaseEntity
+    public class AddSubjectDTO
     {
         public string SubjectName { get; set; }
         public ICollection<SubSubject> SubSubjects { get; set; }

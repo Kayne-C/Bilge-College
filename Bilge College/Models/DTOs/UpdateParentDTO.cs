@@ -1,9 +1,9 @@
-﻿using Bilge_College.Models.Entities.Abstract;
+﻿using Bilge_College.Models.Entities.Concrete;
 using System.Collections.Generic;
 
-namespace Bilge_College.Models.Entities.Concrete
+namespace Bilge_College.Models.DTOs
 {
-    public class Parent : BaseEntity
+    public class UpdateParentDTO
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -11,6 +11,5 @@ namespace Bilge_College.Models.Entities.Concrete
         public string WorkPhone { get; set; }
         public string HomeAddress { get; set; }
         public ICollection<Student> Childs { get; set; }
-
     }
 }
