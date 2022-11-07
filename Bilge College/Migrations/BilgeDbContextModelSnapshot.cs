@@ -141,7 +141,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("Capacity")
+                    b.Property<int>("Capacity")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
@@ -153,7 +153,7 @@ namespace Bilge_College.Migrations
                     b.Property<int>("Level")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Rate")
+                    b.Property<int>("Rate")
                         .HasColumnType("int");
 
                     b.Property<string>("SchoolName")
@@ -191,7 +191,7 @@ namespace Bilge_College.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SchoolReport");
+                    b.ToTable("SchoolReports");
                 });
 
             modelBuilder.Entity("Bilge_College.Models.Entities.Concrete.Student", b =>

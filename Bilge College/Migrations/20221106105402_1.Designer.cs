@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bilge_College.Migrations
 {
     [DbContext(typeof(BilgeDbContext))]
-    [Migration("20221102201837_12")]
-    partial class _12
+    [Migration("20221106105402_1")]
+    partial class _1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -143,7 +143,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("Capacity")
+                    b.Property<int>("Capacity")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
@@ -155,7 +155,7 @@ namespace Bilge_College.Migrations
                     b.Property<int>("Level")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Rate")
+                    b.Property<int>("Rate")
                         .HasColumnType("int");
 
                     b.Property<string>("SchoolName")
@@ -193,7 +193,7 @@ namespace Bilge_College.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SchoolReport");
+                    b.ToTable("SchoolReports");
                 });
 
             modelBuilder.Entity("Bilge_College.Models.Entities.Concrete.Student", b =>

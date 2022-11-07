@@ -23,6 +23,9 @@ namespace Bilge_College.Models.AutoMapper
             CreateMap<School, AddSchoolDTO>().ReverseMap();
             CreateMap<School, UpdateSchoolDTO>().ReverseMap();
 
+            CreateMap<SchoolReport, AddSchoolReportDTO>().ReverseMap();
+            CreateMap<SchoolReport, UpdateSchoolReportDTO>().ReverseMap();
+
             CreateMap<Student, AddStudentDTO>().ReverseMap();
             CreateMap<Student, UpdateStudentDTO>().ReverseMap();
 

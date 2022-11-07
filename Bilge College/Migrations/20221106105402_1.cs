@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Bilge_College.Migrations
 {
-    public partial class _12 : Migration
+    public partial class _1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -70,7 +70,7 @@ namespace Bilge_College.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SchoolReport",
+                name: "SchoolReports",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -82,7 +82,7 @@ namespace Bilge_College.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SchoolReport", x => x.Id);
+                    table.PrimaryKey("PK_SchoolReports", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -93,8 +93,8 @@ namespace Bilge_College.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SchoolName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Level = table.Column<int>(type: "int", nullable: false),
-                    Rate = table.Column<int>(type: "int", nullable: true),
-                    Capacity = table.Column<int>(type: "int", nullable: true),
+                    Rate = table.Column<int>(type: "int", nullable: false),
+                    Capacity = table.Column<int>(type: "int", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     DeleteDate = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -273,9 +273,9 @@ namespace Bilge_College.Migrations
                 {
                     table.PrimaryKey("PK_SchoolReportStudent", x => new { x.SchoolReportsId, x.StudentsId });
                     table.ForeignKey(
-                        name: "FK_SchoolReportStudent_SchoolReport_SchoolReportsId",
+                        name: "FK_SchoolReportStudent_SchoolReports_SchoolReportsId",
                         column: x => x.SchoolReportsId,
-                        principalTable: "SchoolReport",
+                        principalTable: "SchoolReports",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -321,9 +321,9 @@ namespace Bilge_College.Migrations
                 {
                     table.PrimaryKey("PK_SchoolReportSubSubject", x => new { x.SchoolReportsId, x.SubSubjectsId });
                     table.ForeignKey(
-                        name: "FK_SchoolReportSubSubject_SchoolReport_SchoolReportsId",
+                        name: "FK_SchoolReportSubSubject_SchoolReports_SchoolReportsId",
                         column: x => x.SchoolReportsId,
-                        principalTable: "SchoolReport",
+                        principalTable: "SchoolReports",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -434,7 +434,7 @@ namespace Bilge_College.Migrations
                 name: "Students");
 
             migrationBuilder.DropTable(
-                name: "SchoolReport");
+                name: "SchoolReports");
 
             migrationBuilder.DropTable(
                 name: "SubSubjects");

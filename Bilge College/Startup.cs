@@ -46,7 +46,8 @@ namespace Bilge_College
             services.AddScoped<IClassroomRepository, ClassroomRepository>();
             services.AddScoped<IInspectorRepository, InspectorRepository>();
             services.AddScoped<IParentRepository, ParentRepository>();
-            services.AddScoped<ISchoolRepository, SchoolReporty>();
+            services.AddScoped<ISchoolRepository, SchoolRepository>();
+            services.AddScoped<ISchoolReportRepository, SchoolReportRepository>();
             services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddScoped<ISubjectRepository, SubjectRepository>();
             services.AddScoped<ISubSubjectRepository, SubSubjectRepository>();
