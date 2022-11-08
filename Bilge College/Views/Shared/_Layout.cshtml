@@ -3,15 +3,60 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Thasadith:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500&display=swap" rel="stylesheet">
     <title>@ViewData["Title"] - Bilge College</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+      <style>
+            body {
+                background-image: url(/img/background.png);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+            }
+            .navbar-default {
+                background-color: #8dc5f0;
+                background-image: none;
+                border-color: #8dc5f0;
+                background-repeat: no-repeat;
+            }
+            .logo-picture {
+                display: block;
+                vertical-align: middle;
+                margin-top: 100px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+            h1 {
+                color: blue;
+            }
+
+            li {
+                font-family: 'Thasadith', sans-serif;
+                font-size: 15px;
+                font-weight: 600;
+                color: red;
+            }
+
+            a {
+                color:white;
+                font-weight:900;
+            }
+
+            p {
+                color: white;
+                font-family: 'Thasadith', sans-serif;
+            }
+        </style>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bilge_College</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bilge Koleji</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -19,16 +64,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="">Student Login</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="">Öğrenci Girişi</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="">Teacher Login</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="">Öğretmen Girişi</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="">Admin Login</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="">Yönetim Girişi</a>
                         </li>
                     </ul>
                 </div>
@@ -43,7 +88,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - Bilge College - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; @DateTime.Now.Year - Bilge Koleji - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
