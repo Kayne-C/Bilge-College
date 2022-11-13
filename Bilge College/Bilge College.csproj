@@ -7,6 +7,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\all.min.css" />
+    <Content Remove="wwwroot\css\animate.min.css" />
+    <Content Remove="wwwroot\css\bootstrap.min.css" />
+    <Content Remove="wwwroot\css\datepicker.min.css" />
+    <Content Remove="wwwroot\css\fullcalendar.min.css" />
+    <Content Remove="wwwroot\css\jquery-jvectormap-2.0.3.css" />
+    <Content Remove="wwwroot\css\jquery.dataTables.min.css" />
+    <Content Remove="wwwroot\css\main.css" />
+    <Content Remove="wwwroot\css\normalize.css" />
+    <Content Remove="wwwroot\css\select2.min.css" />
+    <Content Remove="wwwroot\js\bootstrap.min.js" />
+    <Content Remove="wwwroot\js\Chart.min.js" />
+    <Content Remove="wwwroot\js\datepicker.min.js" />
+    <Content Remove="wwwroot\js\fullcalendar.min.js" />
+    <Content Remove="wwwroot\js\google-marker-map.js" />
+    <Content Remove="wwwroot\js\jquery-3.3.1.min.js" />
+    <Content Remove="wwwroot\js\jquery-jvectormap-2.0.3.min.js" />
+    <Content Remove="wwwroot\js\jquery-jvectormap-world-mill.js" />
+    <Content Remove="wwwroot\js\jquery.counterup.min.js" />
+    <Content Remove="wwwroot\js\jquery.dataTables.min.js" />
+    <Content Remove="wwwroot\js\jquery.scrollUp.min.js" />
+    <Content Remove="wwwroot\js\jquery.waypoints.min.js" />
+    <Content Remove="wwwroot\js\main.js" />
+    <Content Remove="wwwroot\js\modernizr-3.6.0.min.js" />
+    <Content Remove="wwwroot\js\moment.min.js" />
+    <Content Remove="wwwroot\js\plugins.js" />
+    <Content Remove="wwwroot\js\popper.min.js" />
+    <Content Remove="wwwroot\js\select2.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.17" />
@@ -21,8 +52,103 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Inspector\Controllers\" />
+    <Folder Include="Areas\Inspector\Data\" />
+    <Folder Include="Areas\Inspector\Models\" />
+    <Folder Include="Areas\Inspector\Views\" />
+    <Folder Include="Areas\Student\Data\" />
+    <Folder Include="Areas\Student\Models\" />
+    <Folder Include="Areas\Teacher\Controllers\" />
+    <Folder Include="Areas\Teacher\Data\" />
+    <Folder Include="Areas\Teacher\Models\" />
+    <Folder Include="Areas\Teacher\Views\" />
     <Folder Include="Models\ViewModels\" />
-    <Folder Include="Views\Classroom\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\all.min.css" />
+    <None Include="wwwroot\css\animate.min.css" />
+    <None Include="wwwroot\css\bootstrap.min.css" />
+    <None Include="wwwroot\css\datepicker.min.css" />
+    <None Include="wwwroot\css\fullcalendar.min.css" />
+    <None Include="wwwroot\css\jquery-jvectormap-2.0.3.css" />
+    <None Include="wwwroot\css\jquery.dataTables.min.css" />
+    <None Include="wwwroot\css\main.css" />
+    <None Include="wwwroot\css\normalize.css" />
+    <None Include="wwwroot\css\select2.min.css" />
+    <None Include="wwwroot\fonts\flaticon.css" />
+    <None Include="wwwroot\fonts\Flaticon.eot" />
+    <None Include="wwwroot\fonts\flaticon.html" />
+    <None Include="wwwroot\fonts\Flaticon.svg" />
+    <None Include="wwwroot\fonts\Flaticon.ttf" />
+    <None Include="wwwroot\fonts\Flaticon.woff" />
+    <None Include="wwwroot\fonts\Flaticon.woff2" />
+    <None Include="wwwroot\fonts\_flaticon.scss" />
+    <None Include="wwwroot\img\favicon.png" />
+    <None Include="wwwroot\img\figure\admin.jpg" />
+    <None Include="wwwroot\img\figure\login-bg.jpg" />
+    <None Include="wwwroot\img\figure\parents.jpg" />
+    <None Include="wwwroot\img\figure\student.png" />
+    <None Include="wwwroot\img\figure\student1.jpg" />
+    <None Include="wwwroot\img\figure\student1.png" />
+    <None Include="wwwroot\img\figure\student10.png" />
+    <None Include="wwwroot\img\figure\student11.png" />
+    <None Include="wwwroot\img\figure\student12.png" />
+    <None Include="wwwroot\img\figure\student13.png" />
+    <None Include="wwwroot\img\figure\student2.png" />
+    <None Include="wwwroot\img\figure\student3.png" />
+    <None Include="wwwroot\img\figure\student4.png" />
+    <None Include="wwwroot\img\figure\student5.png" />
+    <None Include="wwwroot\img\figure\student6.png" />
+    <None Include="wwwroot\img\figure\student7.png" />
+    <None Include="wwwroot\img\figure\student8.png" />
+    <None Include="wwwroot\img\figure\student9.png" />
+    <None Include="wwwroot\img\figure\teacher.jpg" />
+    <None Include="wwwroot\img\figure\user.jpg" />
+    <None Include="wwwroot\img\figure\user1.jpg" />
+    <None Include="wwwroot\img\figure\user2.jpg" />
+    <None Include="wwwroot\img\figure\user3.jpg" />
+    <None Include="wwwroot\img\figure\user4.jpg" />
+    <None Include="wwwroot\img\figure\user5.jpg" />
+    <None Include="wwwroot\img\logo-icon.png" />
+    <None Include="wwwroot\img\logo.jpg" />
+    <None Include="wwwroot\img\logo.png" />
+    <None Include="wwwroot\img\logo1.png" />
+    <None Include="wwwroot\img\logo2.png" />
+    <None Include="wwwroot\img\map-marker.png" />
+    <None Include="wwwroot\img\preloader.gif" />
+    <None Include="wwwroot\js\bootstrap.min.js" />
+    <None Include="wwwroot\js\Chart.min.js" />
+    <None Include="wwwroot\js\datepicker.min.js" />
+    <None Include="wwwroot\js\fullcalendar.min.js" />
+    <None Include="wwwroot\js\google-marker-map.js" />
+    <None Include="wwwroot\js\jquery-3.3.1.min.js" />
+    <None Include="wwwroot\js\jquery-jvectormap-2.0.3.min.js" />
+    <None Include="wwwroot\js\jquery-jvectormap-world-mill.js" />
+    <None Include="wwwroot\js\jquery.counterup.min.js" />
+    <None Include="wwwroot\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\js\jquery.scrollUp.min.js" />
+    <None Include="wwwroot\js\jquery.waypoints.min.js" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\js\modernizr-3.6.0.min.js" />
+    <None Include="wwwroot\js\moment.min.js" />
+    <None Include="wwwroot\js\plugins.js" />
+    <None Include="wwwroot\js\popper.min.js" />
+    <None Include="wwwroot\js\select2.min.js" />
+    <None Include="wwwroot\style.css" />
+    <None Include="wwwroot\style.less" />
+    <None Include="wwwroot\webfonts\fa-brands-400.eot" />
+    <None Include="wwwroot\webfonts\fa-brands-400.ttf" />
+    <None Include="wwwroot\webfonts\fa-brands-400.woff" />
+    <None Include="wwwroot\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\webfonts\fa-regular-400.eot" />
+    <None Include="wwwroot\webfonts\fa-regular-400.ttf" />
+    <None Include="wwwroot\webfonts\fa-regular-400.woff" />
+    <None Include="wwwroot\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\webfonts\fa-solid-900.eot" />
+    <None Include="wwwroot\webfonts\fa-solid-900.ttf" />
+    <None Include="wwwroot\webfonts\fa-solid-900.woff" />
+    <None Include="wwwroot\webfonts\fa-solid-900.woff2" />
   </ItemGroup>
 
 </Project>

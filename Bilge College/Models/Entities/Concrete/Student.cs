@@ -21,9 +21,9 @@ namespace Bilge_College.Models.Entities.Concrete
         [NotMapped]
         public IFormFile UploadImage { get; set; }
         public Grade Grade { get; set; }
-        public int ClassroomId { get; set; }
+        public int? ClassroomId { get; set; }
         public Classroom Classroom { get; set; }
-        public int SchoolId { get; set; }
+        public int? SchoolId { get; set; }
         public School School { get; set; }
         public int AvarageScore { get; set; }
         public AStatus AttendanceStatus { get; set; }

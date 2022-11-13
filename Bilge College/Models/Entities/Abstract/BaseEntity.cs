@@ -7,6 +7,7 @@ namespace Bilge_College.Models.Entities.Abstract
     public class BaseEntity
     {
         public int Id { get; set; }
+
         private DateTime _createDate = DateTime.Now;
         public DateTime CreateDate { get => _createDate; set => _createDate = value; }
         public DateTime? UpdateDate { get; set; }

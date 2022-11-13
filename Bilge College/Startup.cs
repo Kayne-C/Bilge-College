@@ -42,7 +42,7 @@ namespace Bilge_College
             {
                 options.UseSqlServer(Configuration.GetConnectionString("conStr"));
             });
-            //services.AddScoped(typeof(IBaseRepository<>),typeof(BaseRepository<>));
+            services.AddScoped(typeof(IBaseRepository<>),typeof(BaseRepository<>));
             services.AddScoped<IClassroomRepository, ClassroomRepository>();
             services.AddScoped<IInspectorRepository, InspectorRepository>();
             services.AddScoped<IParentRepository, ParentRepository>();
@@ -78,10 +78,16 @@ namespace Bilge_College
 
             app.UseEndpoints(endpoints =>
             {
+
+            endpoints.MapControllerRoute(
+                name: "areaDefault",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        
         }
     }
 }

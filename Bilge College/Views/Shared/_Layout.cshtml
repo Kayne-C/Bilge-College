@@ -1,99 +1,49 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html class="no-js" lang="">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Thasadith:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500&display=swap" rel="stylesheet">
-    <title>@ViewData["Title"] - Bilge College</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Bilge Koleji - Giriş</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="/css/all.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/fonts/flaticon.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Modernize js -->
+    <script src="/js/modernizr-3.6.0.min.js"></script>
 </head>
+
 <body>
-      <style>
-            body {
-                background-image: url(/img/background.png);
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-position: center;
-                background-size: cover;
-            }
-            .navbar-default {
-                background-color: #8dc5f0;
-                background-image: none;
-                border-color: #8dc5f0;
-                background-repeat: no-repeat;
-            }
-            .logo-picture {
-                display: block;
-                vertical-align: middle;
-                margin-top: 100px;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
-            }
-            h1 {
-                color: blue;
-            }
 
-            li {
-                font-family: 'Thasadith', sans-serif;
-                font-size: 15px;
-                font-weight: 600;
-                color: red;
-            }
-
-            a {
-                color:white;
-                font-weight:900;
-            }
-
-            p {
-                color: white;
-                font-family: 'Thasadith', sans-serif;
-            }
-        </style>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bilge Koleji</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="">Öğrenci Girişi</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="">Öğretmen Girişi</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="">Yönetim Girişi</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
             @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; @DateTime.Now.Year - Bilge Koleji - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- jquery-->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <!-- Plugins js -->
+    <script src="/js/plugins.js"></script>
+    <!-- Popper js -->
+    <script src="/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Scroll Up Js -->
+    <script src="/js/jquery.scrollUp.min.js"></script>
+    <!-- Custom Js -->
+    <script src="/js/main.js"></script>
+
 </body>
 </html>

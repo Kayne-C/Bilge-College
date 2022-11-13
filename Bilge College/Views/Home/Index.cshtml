@@ -1,26 +1,13 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Bilge Koleji - Giriş";
 }
+    <div style="background-image: url('/img/figure/home-bg.jpg');" class="login-page-wrap">
+               <div style=" margin-left:auto; margin-right:auto; position:absolute;
+  padding: 250px; padding-left: 450px; padding-top:400px" class="row">
+              <a  button asp-action="Index" asp-controller="Login" asp-area="Teacher"><img src="/img/figure/admin-button.png" /></a>
+              <a button asp-action="Index" asp-controller="Login" asp-area="Inspector"><img src="/img/figure/parent-button.png" /></a>
+              <a button asp-action="Index" asp-controller="Login" asp-area="Student"><img src="/img/figure/student-button.png" /></a>
+        </div>         
+    </div>
 
-<div class="jumbotron">
-    <h1>Bilge College</h1>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Welcome to Bilge College</h2>
-        <p>
-            Bilge College is a education center located at Güneysu in Rize
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Who we are?</h2>
-        <p>We're the best establishment for the needs of students and parents choosed.</p>
-        <p><a class="btn btn-default" href="/AboutUs">For more.. &raquo;</a></p>
-        <button-save></button-save>
-    </div>
-    <div class="col-md-4">
-        <h2>Header</h2>
-        <p>Paragraph.</p>
-        <p><a class="btn btn-default" href="/AboutUs">See for more &raquo;</a></p>
-    </div>
-</div>

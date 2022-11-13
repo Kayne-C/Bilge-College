@@ -2,7 +2,7 @@
 
 namespace Bilge_College.Infrastructure.Repositories.Interfaces
 {
-    public interface IInspectorRepository : IBaseRepository<Inspector>
+    public interface IInspectorRepository : IBaseRepository<Inspector> 
     {
     }
 }
