@@ -38,7 +38,7 @@
         <div class="navbar navbar-expand-md header-menu-one bg-light">
             <div class="nav-bar-header-one">
                 <div class="header-logo">
-                    <a href="index.html">
+                    <a asp-action="Index">
                         <img src="/img/logo.png" alt="logo">
                     </a>
                 </div>
@@ -61,61 +61,23 @@
                 </button>
             </div>
             <div class="header-main-menu collapse navbar-collapse" id="mobile-navbar">
-                <ul class="navbar-nav">
-                    <li class="navbar-item header-search-bar">
-                        <div class="input-group stylish-input-group">
-                            <span class="input-group-addon">
-                                <button type="submit">
-                                    <span class="flaticon-search" aria-hidden="true"></span>
-                                </button>
-                            </span>
-                            <input type="text" class="form-control" placeholder="Find Something . . .">
-                        </div>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="navbar-item dropdown header-admin">
-                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                            aria-expanded="false">
-                            <div class="admin-title">
-                                <h5 class="item-title">Stevne Zone</h5>
-                                <span>Admin</span>
-                            </div>
-                            <div class="admin-img">
-                                <img src="img/figure/admin.jpg" alt="Admin">
-                            </div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <div class="item-header">
-                                <h6 class="item-title">Steven Zone</h6>
-                            </div>
-                            <div class="item-content">
-                                <ul class="settings-list">
-                                    <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
-                                    <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
-                                    <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
-                                    <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
-                                    <li><a href="login.html"><i class="flaticon-turn-off"></i>Log Out</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
+                <ul class="navbar-nav"></ul>
+                <ul class="navbar-nav">     
                     <li class="navbar-item dropdown header-message">
                         <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                             aria-expanded="false">
                             <i class="far fa-envelope"></i>
-                            <div class="item-title d-md-none text-16 mg-l-10">Message</div>
-                            <span>5</span>
+                            <div class="item-title d-md-none text-16 mg-l-10">Mesajlar</div>
+                            @*<span>5</span> bildirim iconundaki mesaj sayisi belirtilecek*@ 
                         </a>
-
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="item-header">
-                                <h6 class="item-title">05 Message</h6>
+                                <h6 class="item-title">@*05 bildirim iconundaki mesaj sayisi belirtilecek*@ Mesaj</h6>
                             </div>
                             <div class="item-content">
                                 <div class="media">
                                     <div class="item-img bg-skyblue author-online">
-                                        <img src="img/figure/student11.png" alt="img">
+                                        <img src="/img/figure/student11.png" alt="img">
                                     </div>
                                     <div class="media-body space-sm">
                                         <div class="item-title">
@@ -181,12 +143,12 @@
                             aria-expanded="false">
                             <i class="far fa-bell"></i>
                             <div class="item-title d-md-none text-16 mg-l-10">Notification</div>
-                            <span>8</span>
+                            @*<span>8 bildirim iconundaki mesaj sayisi belirtilecek</span>*@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="item-header">
-                                <h6 class="item-title">03 Notifiacations</h6>
+                                <h6 class="item-title">@*03 bildirim iconundaki mesaj sayisi belirtilecek*@Bildirimler</h6>
                             </div>
                             <div class="item-content">
                                 <div class="media">
@@ -217,6 +179,31 @@
                                     </div>
                                 </div>
                             </div>
+                        </div> 
+                             <li class="navbar-item dropdown header-admin">
+                        <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            <div class="admin-title">
+                                <h5 class="item-title">@Context.Session.GetString("fullname")</h5>
+                                <span>Student</span>
+                            </div>
+                            <div class="admin-img">
+                                <img src="/ProfileImages/test.jpg" alt="Photo">
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="item-header">
+                                <h6 class="item-title">@Context.Session.GetString("fullname")</h6>
+                            </div>
+                            <div class="item-content">
+                                <ul class="settings-list">
+                                    <li><a asp-action="Profile"><i class="flaticon-user"></i>Profilim</a></li>
+                                    <li><a href="#"><i class="flaticon-list"></i>Ödevlerim</a></li>
+                                    <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Mesajlar</a></li>
+                                    <li><a href="#"><i class="flaticon-gear-loading"></i>Hesap Ayarları</a></li>
+                                    <li><a asp-action="LogOut"><i class="flaticon-turn-off"></i>Çıkış</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -224,17 +211,65 @@
         </div>
         <!-- Header Menu Area End Here -->
         <!-- Page Area Start Here -->
-            @RenderBody();
+        <div class="dashboard-page-one">
+            <!-- Sidebar Area Start Here -->
+            <div class="sidebar-main sidebar-menu-one sidebar-expand-md sidebar-color">
+               <div class="mobile-sidebar-header d-md-none">
+                    <div class="header-logo">
+                        <a href="index.html"><img src="img/logo1.png" alt="logo"></a>
+                    </div>
+               </div>
+                <div class="sidebar-menu-content">
+                     <ul class="nav nav-sidebar-menu sidebar-toggle-view">
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link"><i class="flaticon-multiple-users-silhouette"></i><span>Öğrenci Paneli</span></a>
+                            <ul class="nav sub-group-menu">
+                                <li class="nav-item">
+                                    <a asp-action="NoticeBoard" class="nav-link"><i class="flaticon-script"></i>Duyurular</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-action="Profile" class="nav-link"><i class="flaticon-classmates"></i>Bilgilerim</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a asp-action="Notes" class="nav-link"><i class="flaticon-open-book"></i>Notlarım</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="index4.html" class="nav-link"><i class="flaticon-calendar"></i>Ders Programı</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="index5.html" class="nav-link"><i class="flaticon-checklist"></i>Devamsızlık Durumu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="index5.html" class="nav-link"><i class="flaticon-shopping-list"></i>Sınav Takvimi</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="index5.html" class="nav-link"><i class="flaticon-chat"></i>Mesajlarım</a>
+                                </li>
+                                  <li class="nav-item">
+                                    <a href="index5.html" class="nav-link"><i class="flaticon-settings"></i>Hesap Ayarları</a>
+                                </li>
+                            </ul>
+                        </li>
+                     </ul>
+                </div>
+            </div>
+            <!-- Sidebar Area End Here -->
+            <div class="dashboard-content-one">
 
-                <!-- Footer Area Start Here -->
-                <footer class="footer-wrap-layout1">
-                    <div class="copyright">© Copyrights <a href="#">Bilge Koleji</a> . All rights reserved. Designed by Khan</div>
+
+            @RenderBody()
+
+
+             <!-- Footer Area Start Here -->
+                <footer style="margin-top:auto" class="footer-wrap-layout1">
+                    <div class="copyright">© Copyrights <a href="#">Bilge Koleji</a> . All rights reserved. Designed by <a
+                            href="https://github.com/Kayne-C">Khan</a></div>
                 </footer>
                 <!-- Footer Area End Here -->
             </div>
-
+        </div>
         <!-- Page Area End Here -->
-
+    </div>
     <!-- jquery-->
     <script src="/js/jquery-3.3.1.min.js"></script>
     <!-- Plugins js -->
@@ -257,6 +292,8 @@
     <script src="/js/Chart.min.js"></script>
     <!-- Data Table Js -->
     <script src="/js/jquery.dataTables.min.js"></script>
+    <!-- Moment Js -->
+    <script src="/js/moment.min.js"></script>
     <!-- Custom Js -->
     <script src="/js/main.js"></script>
 

@@ -1,0 +1,54 @@
+﻿@using Bilge_College.Models.Entities.Concrete
+@model List<Notice>
+@{
+    ViewData["Title"] = "Duyurular";
+    Layout = "~/Areas/Student/Views/Shared/_Layout.cshtml";
+    
+}
+
+ <!-- Breadcubs Area Start Here -->
+                <div class="breadcrumbs-area">
+                    <h3>Duyurular</h3>
+                    <ul>
+                        <li>
+                            <a asp-action="Index">Anasayfa</a>
+                        </li>
+                        <li>Duyurular</li>
+                    </ul>
+                </div>
+                <!-- Breadcubs Area End Here -->
+                <div class="row">
+                    <!-- All Notice Area Start Here -->
+                    <div class="col-8-xxxl col-12">
+                        <div class="card height-auto">
+                            <div class="card-body">
+                                <div class="heading-layout1">
+                                    <div class="item-title">
+                                        <h3>Duyuru Panosu</h3>
+                                    </div>    
+                                </div>
+                                <div class="notice-board-wrap">  
+                            @if (Model is null || Model.Count == 0)
+                        {
+                            <div class="notice-list">
+                            <h6 class="notice-title">Yeni bir duyuru yok</h6>
+                            </div>
+                        }
+                        else
+                        {
+                              foreach(Notice notice in Model)
+                            {
+                                <div class="notice-list">
+                                        <div class="post-date bg-yellow">@notice.CreateDate.ToString("dd/MM/yyyy")</div>
+                                        <h6 class="notice-title">@notice.Description</h6>
+                                        <div class="entry-meta">Test@*@(notice.Teacher.FirstName)  @(notice.Teacher.LastName)*@/ <span>moment().startOf(@notice.CreateDate).fromNow();</span></div>
+                                    </div>
+                            }
+                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- All Notice Area End Here -->

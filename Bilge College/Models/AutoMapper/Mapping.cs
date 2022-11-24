@@ -29,6 +29,7 @@ namespace Bilge_College.Models.AutoMapper
             CreateMap<Student, AddStudentDTO>().ReverseMap();
             CreateMap<Student, UpdateStudentDTO>().ReverseMap();
             CreateMap<Student, LoginStudentDTO>().ReverseMap();
+            CreateMap<Student, ReviewStudentDetailsDTO>().ReverseMap();
 
             CreateMap<Subject, AddSubjectDTO>().ReverseMap();
             CreateMap<Subject, UpdateSubjectDTO>().ReverseMap();
@@ -38,6 +39,8 @@ namespace Bilge_College.Models.AutoMapper
 
             CreateMap<Teacher, AddTeacherDTO>().ReverseMap();
             CreateMap<Teacher, UpdateTeacherDTO>().ReverseMap();
+
+            CreateMap<Notice, ReviewNoticeDTO>().ReverseMap();
 
         }
     }

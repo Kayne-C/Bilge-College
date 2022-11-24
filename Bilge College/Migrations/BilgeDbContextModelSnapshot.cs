@@ -95,6 +95,41 @@ namespace Bilge_College.Migrations
                     b.ToTable("Inspectors");
                 });
 
+            modelBuilder.Entity("Bilge_College.Models.Entities.Concrete.Notice", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TeacherId");
+
+                    b.ToTable("Notices");
+                });
+
             modelBuilder.Entity("Bilge_College.Models.Entities.Concrete.Parent", b =>
                 {
                     b.Property<int>("Id")
@@ -108,6 +143,9 @@ namespace Bilge_College.Migrations
                     b.Property<DateTime?>("DeleteDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
@@ -118,6 +156,9 @@ namespace Bilge_College.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
@@ -213,7 +254,7 @@ namespace Bilge_College.Migrations
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ClassroomId")
+                    b.Property<int?>("ClassroomId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
@@ -243,7 +284,7 @@ namespace Bilge_College.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SchoolId")
+                    b.Property<int?>("SchoolId")
                         .HasColumnType("int");
 
                     b.Property<int>("Status")
@@ -407,6 +448,36 @@ namespace Bilge_College.Migrations
                     b.ToTable("ClassroomTeacher");
                 });
 
+            modelBuilder.Entity("NoticeParent", b =>
+                {
+                    b.Property<int>("NoticesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ParentsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("NoticesId", "ParentsId");
+
+                    b.HasIndex("ParentsId");
+
+                    b.ToTable("NoticeParent");
+                });
+
+            modelBuilder.Entity("NoticeStudent", b =>
+                {
+                    b.Property<int>("NoticesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("NoticesId", "StudentsId");
+
+                    b.HasIndex("StudentsId");
+
+                    b.ToTable("NoticeStudent");
+                });
+
             modelBuilder.Entity("ParentStudent", b =>
                 {
                     b.Property<int>("ChildsId")
@@ -467,19 +538,26 @@ namespace Bilge_College.Migrations
                     b.ToTable("SubSubjectTeacher");
                 });
 
+            modelBuilder.Entity("Bilge_College.Models.Entities.Concrete.Notice", b =>
+                {
+                    b.HasOne("Bilge_College.Models.Entities.Concrete.Teacher", "Teacher")
+                        .WithMany("Notices")
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Teacher");
+                });
+
             modelBuilder.Entity("Bilge_College.Models.Entities.Concrete.Student", b =>
                 {
                     b.HasOne("Bilge_College.Models.Entities.Concrete.Classroom", "Classroom")
                         .WithMany("Students")
-                        .HasForeignKey("ClassroomId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ClassroomId");
 
                     b.HasOne("Bilge_College.Models.Entities.Concrete.School", "School")
                         .WithMany("Students")
-                        .HasForeignKey("SchoolId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SchoolId");
 
                     b.Navigation("Classroom");
 
@@ -523,6 +601,36 @@ namespace Bilge_College.Migrations
                     b.HasOne("Bilge_College.Models.Entities.Concrete.Teacher", null)
                         .WithMany()
                         .HasForeignKey("TeachersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("NoticeParent", b =>
+                {
+                    b.HasOne("Bilge_College.Models.Entities.Concrete.Notice", null)
+                        .WithMany()
+                        .HasForeignKey("NoticesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Bilge_College.Models.Entities.Concrete.Parent", null)
+                        .WithMany()
+                        .HasForeignKey("ParentsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("NoticeStudent", b =>
+                {
+                    b.HasOne("Bilge_College.Models.Entities.Concrete.Notice", null)
+                        .WithMany()
+                        .HasForeignKey("NoticesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Bilge_College.Models.Entities.Concrete.Student", null)
+                        .WithMany()
+                        .HasForeignKey("StudentsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -600,6 +708,11 @@ namespace Bilge_College.Migrations
             modelBuilder.Entity("Bilge_College.Models.Entities.Concrete.Subject", b =>
                 {
                     b.Navigation("SubSubjects");
+                });
+
+            modelBuilder.Entity("Bilge_College.Models.Entities.Concrete.Teacher", b =>
+                {
+                    b.Navigation("Notices");
                 });
 #pragma warning restore 612, 618
         }

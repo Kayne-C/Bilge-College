@@ -31,6 +31,7 @@ namespace Bilge_College
         {
             services.AddAutoMapper(typeof(Mapping));
             services.AddControllersWithViews();
+            services.AddSession();
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new Mapping());
@@ -53,6 +54,7 @@ namespace Bilge_College
             services.AddScoped<ISubSubjectRepository, SubSubjectRepository>();
             services.AddScoped<IClassroomRepository, ClassroomRepository>();
             services.AddScoped<ITeacherRepository, TeacherRepository>();
+            services.AddScoped<INoticeRepository, NoticeRepository>();
 
         }
 
@@ -75,6 +77,7 @@ namespace Bilge_College
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
@@ -88,6 +91,7 @@ namespace Bilge_College
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         
+            AppDbInitializer.Seed(app);
         }
     }
 }

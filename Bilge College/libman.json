@@ -13,6 +13,10 @@
     {
       "library": "popper.js@2.11.6",
       "destination": "wwwroot/lib/popper.js/"
+    },
+    {
+      "library": "moment.js@2.29.4",
+      "destination": "wwwroot/lib/moment.js/"
     }
   ]
 }

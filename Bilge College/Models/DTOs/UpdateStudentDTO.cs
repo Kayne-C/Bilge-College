@@ -1,22 +1,16 @@
 ﻿using Bilge_College.Models.Entities.Concrete;
+using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
 namespace Bilge_College.Models.DTOs
 {
     public class UpdateStudentDTO
     {
-        [Display(Name = "First Name")]
-        [Required(ErrorMessage = "Must to the type into a first name")]
-        public string FirstName { get; set; }
-        [Display(Name = "Last Name")]
-        [Required(ErrorMessage = "Must to the type into a last name")]
-        public string LastName { get; set; }
-        [Display(Name = "Gender")]
-        [Required(ErrorMessage = "Must to select a gender")]
-        public Gender Gender { get; set; }
-        public int SchoolId { get; set; }
-        public School School { get; set; }
-        [Display(Name = "Avarage Score")]
-        public int AvarageScore { get; set; }
+        [Display(Name = "Password")]
+        public string Password { get; set; }
+        [Display(Name = "Profile Photo")]
+        public string Image { get; set; }
+
+        public IFormFile UploadImage { get; set; }
     }
 }

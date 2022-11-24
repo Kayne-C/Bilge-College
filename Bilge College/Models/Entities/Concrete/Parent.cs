@@ -12,7 +12,9 @@ namespace Bilge_College.Models.Entities.Concrete
         public string HomePhone { get; set; }
         public string WorkPhone { get; set; }
         public string HomeAddress { get; set; }
-        public ICollection<Student> Childs { get; set; }
+        public ICollection<ParentMessage> ParentMessages { get; set; }
+        public ICollection<ParentNotice> ParentNotices { get; set; }
+        public ICollection<StudentParent> StudentParent { get; set; }
 
     }
 }

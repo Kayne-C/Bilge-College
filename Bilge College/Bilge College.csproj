@@ -57,7 +57,6 @@
     <Folder Include="Areas\Inspector\Models\" />
     <Folder Include="Areas\Inspector\Views\" />
     <Folder Include="Areas\Student\Data\" />
-    <Folder Include="Areas\Student\Models\" />
     <Folder Include="Areas\Teacher\Controllers\" />
     <Folder Include="Areas\Teacher\Data\" />
     <Folder Include="Areas\Teacher\Models\" />

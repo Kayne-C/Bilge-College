@@ -3,9 +3,13 @@ using System.Collections.Generic;
 
 namespace Bilge_College.Models.Entities.Concrete
 {
+    public enum Term { BirinciDönem = 1, İkinciDönem }
     public class SchoolReport : BaseEntity
     {
-        public ICollection<SubSubject> SubSubjects{ get; set; }
-        public ICollection<Student> Students{ get; set; }
+     public int StudentId { get; set; }
+     public Student Student { get; set; }
+     public Term Term { get; set; }
+     public int AbsentDay { get; set; }
+     public ICollection<Note> Notes { get; set; }
     }
 }
