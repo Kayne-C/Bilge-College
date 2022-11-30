@@ -26,9 +26,8 @@ namespace Bilge_College.Models.Entities.Concrete
         public School School { get; set; }
         public int AvarageScore { get; set; }  
         public AStatus AttendanceStatus { get; set; }
-        public ICollection<StudentAbsent> StudentAbsents { get; set; }
         public ICollection<StudentMessage> StudentMessages { get; set; }
-        public ICollection<StudentNotice> StudentNotice { get; set; }
+        public ICollection<StudentNotice> StudentNotices { get; set; }
         public ICollection<StudentParent> StudentParent { get; set; }
         public ICollection<SchoolReport> SchoolReports { get; set; }
         

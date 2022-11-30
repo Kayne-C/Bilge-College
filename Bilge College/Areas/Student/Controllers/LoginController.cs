@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Bilge_College.Infrastructure.Repositories.Interfaces;
-using Bilge_College.Models.DTOs;
+using Bilge_College.Models.DTOs.Login;
 using Bilge_College.Models.Entities.Abstract;
 using Bilge_College.Models.Entities.Concrete;
 using Microsoft.AspNetCore.Http;

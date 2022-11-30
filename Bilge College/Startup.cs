@@ -54,7 +54,7 @@ namespace Bilge_College
             services.AddScoped<ISubSubjectRepository, SubSubjectRepository>();
             services.AddScoped<IClassroomRepository, ClassroomRepository>();
             services.AddScoped<ITeacherRepository, TeacherRepository>();
-            services.AddScoped<INoticeRepository, NoticeRepository>();
+            services.AddScoped<INoteRepository, NoticeRepository>();
 
         }
 
@@ -91,7 +91,7 @@ namespace Bilge_College
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         
-            AppDbInitializer.Seed(app);
+            //AppDbInitializer.Seed(app);
         }
     }
 }

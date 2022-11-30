@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using Bilge_College.Filters;
 using Bilge_College.Infrastructure.Repositories.Interfaces;
-using Bilge_College.Models.DTOs;
+using Bilge_College.Models.DTOs.Review;
+using Bilge_College.Models.DTOs.Student;
 using Bilge_College.Models.Entities.Abstract;
 using Bilge_College.Models.Entities.Concrete;
 using Microsoft.AspNetCore.Hosting;
@@ -19,7 +20,7 @@ namespace Bilge_College.Areas.Student.Controllers
     [LoggedUser]
     public class HomeController : Controller
     {
-        private readonly INoticeRepository _noticeRepository;
+        private readonly INoteRepository _noticeRepository;
         private readonly IStudentRepository _studentRepository;
         private readonly IClassroomRepository _classroomRepository;
         private readonly ISubSubjectRepository _subSubjectRepository;
@@ -27,7 +28,7 @@ namespace Bilge_College.Areas.Student.Controllers
         private readonly IWebHostEnvironment _webHostEnvironment;
 
 
-        public HomeController(IStudentRepository studentRepository, IMapper mapper,IWebHostEnvironment webHostEnviroment,INoticeRepository noticeRepository, IClassroomRepository classroomRepository, ISubSubjectRepository subSubjectRepository)
+        public HomeController(IStudentRepository studentRepository, IMapper mapper,IWebHostEnvironment webHostEnviroment,INoteRepository noticeRepository, IClassroomRepository classroomRepository, ISubSubjectRepository subSubjectRepository)
         {
             _studentRepository = studentRepository;
             _noticeRepository = noticeRepository;
@@ -72,8 +73,8 @@ namespace Bilge_College.Areas.Student.Controllers
                 LastName = profile.LastName,
                 Email = profile.Email,
                 BirthDate = profile.BirthDate,
-                Gender  = (Models.DTOs.Gender)profile.Gender,
-                Grade = (Models.DTOs.Grade)profile.Grade,
+                Gender  = (Models.DTOs.Review.Gender)profile.Gender,
+                Grade = (Models.DTOs.Review.Grade)profile.Grade,
                 AvarageScore = profile.AvarageScore,
                 Classroom = classroom
             };
