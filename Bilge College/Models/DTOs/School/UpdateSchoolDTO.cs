@@ -6,6 +6,6 @@ namespace Bilge_College.Models.DTOs.School
 {
     public class UpdateSchoolDTO
     {
-        public ICollection<Student> Students { get; set; }
+        public ICollection<Entities.Concrete.Student> Students { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Bilge_College.Infrastructure.Repositories.Interfaces
 {
-    public interface IParentMessageRepository : IBaseRepository<ParentMessage>
+    public interface IStudentParentRepository : IBaseRepository<StudentParent>
     {
     }
 }

@@ -43,19 +43,27 @@ namespace Bilge_College
             {
                 options.UseSqlServer(Configuration.GetConnectionString("conStr"));
             });
-            services.AddScoped(typeof(IBaseRepository<>),typeof(BaseRepository<>));
+            services.AddScoped<IAdminRepository, AdminRepository>();
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IClassroomRepository, ClassroomRepository>();
             services.AddScoped<IInspectorRepository, InspectorRepository>();
+            services.AddScoped<INoteRepository, NoteRepository>();
+            services.AddScoped<IParentMessageRepository, ParentMessageRepository>();
+            services.AddScoped<IParentNoticeRepository, ParentNoticeRepository>();
             services.AddScoped<IParentRepository, ParentRepository>();
-            services.AddScoped<ISchoolRepository, SchoolRepository>();
             services.AddScoped<ISchoolReportRepository, SchoolReportRepository>();
+            services.AddScoped<ISchoolRepository, SchoolRepository>();
+            services.AddScoped<IStudentMessageRepository, StudentMessageRepository>();
+            services.AddScoped<IStudentNoticeRepository, StudentNoticeRepository>();
+            services.AddScoped<IStudentParentRepository, StudentParentRepository>();
             services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddScoped<ISubjectRepository, SubjectRepository>();
+            services.AddScoped<ISubSubjectClassroomRepository, SubSubjectClassroomRepository>();
             services.AddScoped<ISubSubjectRepository, SubSubjectRepository>();
+            services.AddScoped<ISubSubjectTeacherRepository, SubSubjectTeacherRepository>();
             services.AddScoped<IClassroomRepository, ClassroomRepository>();
-            services.AddScoped<ITeacherRepository, TeacherRepository>();
-            services.AddScoped<INoteRepository, NoticeRepository>();
-
+            services.AddScoped<ITeacherClassroomRepository, TeacherClassroomRepository>();
+            services.AddScoped<ITeacherRepository, TeacherRepository>();                      
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -89,9 +97,7 @@ namespace Bilge_College
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
-        
-            //AppDbInitializer.Seed(app);
+            });    
         }
     }
 }

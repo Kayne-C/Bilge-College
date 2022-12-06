@@ -5,6 +5,12 @@ namespace Bilge_College.Models.Entities.Concrete
 {
     public class SubSubject : BaseEntity
     {
+        public SubSubject()
+        {
+            SubSubjectClassrooms = new HashSet<SubSubjectClassroom>();
+            SubSubjectTeachers = new HashSet<SubSubjectTeacher>();
+            Notes = new HashSet<Note>();
+        }
         public string SubSubjectsName { get; set; }
         public int WeeklyClassTime { get; set; }
         public int SubSubjectCredit { get; set; }

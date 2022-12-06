@@ -4,14 +4,16 @@ using Bilge_College.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bilge_College.Migrations
 {
     [DbContext(typeof(BilgeDbContext))]
-    partial class BilgeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221206180214_bilge-db-seed")]
+    partial class bilgedbseed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

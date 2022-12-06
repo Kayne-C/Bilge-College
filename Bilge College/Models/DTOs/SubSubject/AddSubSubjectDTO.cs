@@ -1,4 +1,4 @@
-﻿using Bilge_College.Models.DTOs.Review;
+﻿using Bilge_College.Models.DTOs.Student.Review;
 using Bilge_College.Models.Entities.Concrete;
 using System.Collections.Generic;
 

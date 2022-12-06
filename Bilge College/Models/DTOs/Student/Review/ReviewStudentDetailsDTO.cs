@@ -1,7 +1,7 @@
 ﻿using Bilge_College.Models.Entities.Concrete;
 using System;
 
-namespace Bilge_College.Models.DTOs.Review
+namespace Bilge_College.Models.DTOs.Student.Review
 {
     public enum Gender { Male = 1, Female }
     public enum Grade { IX = 1, X, XI, XII }
@@ -14,7 +14,7 @@ namespace Bilge_College.Models.DTOs.Review
         public DateTime BirthDate { get; set; }
         public Gender Gender { get; set; }
         public Grade Grade { get; set; }
-        public int? ClassroomId { get; set; }
+        public int ClassroomId { get; set; }
         public char Branch { get; set; }
         public Entities.Concrete.Classroom Classroom { get; set; }
         public int? SchoolId { get; set; }

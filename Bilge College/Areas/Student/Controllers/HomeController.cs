@@ -1,18 +1,15 @@
 ﻿using AutoMapper;
 using Bilge_College.Filters;
 using Bilge_College.Infrastructure.Repositories.Interfaces;
-using Bilge_College.Models.DTOs.Review;
+using Bilge_College.Models.DTOs.Student.Review;
 using Bilge_College.Models.DTOs.Student;
-using Bilge_College.Models.Entities.Abstract;
-using Bilge_College.Models.Entities.Concrete;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
+using Bilge_College.Models.Entities.Abstract;
 
 namespace Bilge_College.Areas.Student.Controllers
 {
@@ -20,22 +17,23 @@ namespace Bilge_College.Areas.Student.Controllers
     [LoggedUser]
     public class HomeController : Controller
     {
-        private readonly INoteRepository _noticeRepository;
         private readonly IStudentRepository _studentRepository;
-        private readonly IClassroomRepository _classroomRepository;
-        private readonly ISubSubjectRepository _subSubjectRepository;
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly INoteRepository _noteRepository;
+        private readonly IClassroomRepository _classroomRepository;
+        private readonly ISubSubjectRepository _subSubjectRepository;
+        private readonly IStudentNoticeRepository _studentNoticeRepository;
 
-
-        public HomeController(IStudentRepository studentRepository, IMapper mapper,IWebHostEnvironment webHostEnviroment,INoteRepository noticeRepository, IClassroomRepository classroomRepository, ISubSubjectRepository subSubjectRepository)
+        public HomeController(IStudentRepository studentRepository, IMapper mapper,IWebHostEnvironment webHostEnviroment, INoteRepository noteRepository, IClassroomRepository classroomRepository, ISubSubjectRepository subSubjectRepository, IStudentNoticeRepository studentNoticeRepository)
         {
             _studentRepository = studentRepository;
-            _noticeRepository = noticeRepository;
+            _noteRepository = noteRepository;
             _classroomRepository = classroomRepository;
             _subSubjectRepository = subSubjectRepository;
             _mapper = mapper;
             _webHostEnvironment = webHostEnviroment;
+            _studentNoticeRepository = studentNoticeRepository;
         }
         public IActionResult Index()
         {
@@ -45,8 +43,8 @@ namespace Bilge_College.Areas.Student.Controllers
         public async Task<IActionResult> NoticeBoard()
         {
             Models.Entities.Concrete.Student student = await _studentRepository.GetByDefault(s => s.Id == int.Parse(HttpContext.Session.GetString("userId")));
-            var notices = await _noticeRepository.GetByDefaults( n => n.Status != Status.Passive && n.Students.Contains(student));
-            return View(notices);
+            var notices = await _studentNoticeRepository.GetByDefaults( n => n.Status != Status.Passive && n.Student.Id == int.Parse(HttpContext.Session.GetString("userId")));
+            return View(/*notes*/);
         } 
         public IActionResult LogOut()
         {
@@ -61,7 +59,7 @@ namespace Bilge_College.Areas.Student.Controllers
         {
 
             var profile = await _studentRepository.GetByDefault(s => s.Email == HttpContext.Session.GetString("email"));
-            var classroom = await _classroomRepository.GetByDefault(s => s.Id == profile.ClassroomId);
+            var classroom = await _classroomRepository.GetByDefault(s => s.Id == profile.Classroom.Id);
             if (profile == null)
             {
                 ModelState.AddModelError("", "Bir hata oluştu. Lütfen çıkış yapıp tekrar deneyiniz..");
@@ -73,8 +71,8 @@ namespace Bilge_College.Areas.Student.Controllers
                 LastName = profile.LastName,
                 Email = profile.Email,
                 BirthDate = profile.BirthDate,
-                Gender  = (Models.DTOs.Review.Gender)profile.Gender,
-                Grade = (Models.DTOs.Review.Grade)profile.Grade,
+                Gender  = (Gender)profile.Gender,
+                Grade = (Grade)profile.Grade,
                 AvarageScore = profile.AvarageScore,
                 Classroom = classroom
             };

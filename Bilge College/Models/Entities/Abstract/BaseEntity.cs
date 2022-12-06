@@ -9,9 +9,13 @@ namespace Bilge_College.Models.Entities.Abstract
         public int Id { get; set; }
 
         private DateTime _createDate = DateTime.Now;
-        public DateTime CreateDate { get => _createDate; set => _createDate = value; }
-        public DateTime UpdateDate { get; set; }
-        public DateTime DeleteDate { get; set; }
+        public DateTime CreateDate
+        {
+            get => _createDate;
+            set => _createDate = value;
+        }
+        public DateTime? UpdateDate { get; set; }
+        public DateTime? DeleteDate { get; set; }
         private Status _status = Status.Active;
         public Status Status { get => _status; set => _status = value; }
     }

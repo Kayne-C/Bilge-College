@@ -6,7 +6,7 @@ using Bilge_College.Models.DTOs.Login;
 using Bilge_College.Models.DTOs.Parent;
 using Bilge_College.Models.DTOs.ParentMessage;
 using Bilge_College.Models.DTOs.ParentNotice;
-using Bilge_College.Models.DTOs.Review;
+using Bilge_College.Models.DTOs.Student.Review;
 using Bilge_College.Models.DTOs.School;
 using Bilge_College.Models.DTOs.SchoolReport;
 using Bilge_College.Models.DTOs.Student;

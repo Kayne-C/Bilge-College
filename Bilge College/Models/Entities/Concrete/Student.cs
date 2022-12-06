@@ -31,6 +31,5 @@ namespace Bilge_College.Models.Entities.Concrete
         public ICollection<StudentParent> StudentParent { get; set; }
         public ICollection<SchoolReport> SchoolReports { get; set; }
         
-
     }
 }

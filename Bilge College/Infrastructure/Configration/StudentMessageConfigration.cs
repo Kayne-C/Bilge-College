@@ -5,59 +5,58 @@ using System;
 
 namespace Bilge_College.Infrastructure.Configration
 {
-    public class SchoolConfiguration : IEntityTypeConfiguration<School>
+    public class StudentMessageConfiguration : IEntityTypeConfiguration<StudentMessage>
     {
-        public void Configure(EntityTypeBuilder<School> builder)
+        public void Configure(EntityTypeBuilder<StudentMessage> builder)
         {
-            builder.HasKey(x => x.Id);
+            builder.Ignore(x => x.Id);
+            builder.HasKey(x => new { x.AdminId, x.StudentId });
             builder.Property(x => x.CreateDate).IsRequired(true).HasColumnType("Date").HasDefaultValueSql("GetDate()");
             builder.Property(x => x.UpdateDate).IsRequired(false).HasColumnType("Date");
             builder.Property(x => x.DeleteDate).IsRequired(false).HasColumnType("Date");
             builder.Property(x => x.Status).IsRequired(true).HasColumnType("INT");
             //---------------------------------------------------------------------------------------------------------
-            builder.Property(x => x.SchoolName).IsRequired(true).HasColumnType("NVARCHAR").HasMaxLength(50);
-            builder.Property(x => x.Level).IsRequired(true).HasColumnType("INT");
-            builder.Property(x => x.Rate).IsRequired(true).HasColumnType("int");
-            builder.Property(x => x.Capacity).IsRequired(true).HasColumnType("int");
+            builder.Property(x => x.Title).IsRequired(true).HasColumnType("NVARCHAR").HasMaxLength(50); ;
+            builder.Property(x => x.Context).IsRequired(true).HasColumnType("NVARCHAR").HasMaxLength(50); ;
+            builder.HasOne(x => x.Admin).WithMany(x => x.StudentMessages).HasForeignKey(x => x.AdminId);
+            builder.HasOne(x => x.Student).WithMany(x => x.StudentMessages).HasForeignKey(x => x.StudentId);
             builder.HasData(
-                new School()
+                new StudentMessage()
                 {
-                    Id = 42,
+                    Id = 51,
                     CreateDate = DateTime.Now,
                     UpdateDate = null,
                     DeleteDate = null,
                     Status = (Models.Entities.Abstract.Status)1,
-                    SchoolName = "Testschool",
-                    Level = (EducationLevel)1,
-                    Rate = 58,
-                    Capacity = 1222,
+                    Title = "Hello",
+                    Context = "This is a test message",
+                    AdminId = 21,
+                    StudentId = 48,
                 },
-                new School()
+                new StudentMessage()
                 {
-                    Id = 43,
+                    Id = 52,
                     CreateDate = DateTime.Now,
                     UpdateDate = null,
                     DeleteDate = null,
                     Status = (Models.Entities.Abstract.Status)1,
-                    SchoolName = "Testschool2",
-                    Level = (EducationLevel)1,
-                    Rate = 57,
-                    Capacity = 1244,
+                    Title = "Hello2",
+                    Context = "This is a test message2",
+                    AdminId = 22,
+                    StudentId = 49,
                 },
-
-                new School()
+                new StudentMessage()
                 {
-                    Id = 44,
+                    Id = 53,
                     CreateDate = DateTime.Now,
                     UpdateDate = null,
                     DeleteDate = null,
                     Status = (Models.Entities.Abstract.Status)1,
-                    SchoolName = "Testschool3",
-                    Level = (EducationLevel)2,
-                    Rate = 67,
-                    Capacity = 1253,  
-                    });
-            //SchoolId=1
+                    Title = "Hello3",
+                    Context = "This is a test message3",
+                    AdminId = 23,
+                    StudentId = 50,  
+                    });               
 
         }
 }

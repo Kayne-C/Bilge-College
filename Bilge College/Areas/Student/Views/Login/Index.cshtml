@@ -1,4 +1,4 @@
-﻿@model LoginStudentDTO
+﻿@model Bilge_College.Models.DTOs.Login.LoginStudentDTO
 @{
     ViewData["Title"] = "Bilge Koleji - Öğrenci Girişi";
     Layout = null;
@@ -34,7 +34,7 @@
     <!-- Modernize js -->
     <script src="/js/modernizr-3.6.0.min.js"></script>
 </head>
-
+@*CTRL K+D*@
 <body>
     <!-- Preloader Start Here -->
     <div id="preloader"></div>
@@ -46,7 +46,7 @@
                 <div class="item-logo">
                     <img src="/img/logologin.png" alt="logo">
                 </div>
-                   <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>  
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
                 <form asp-action="Index" asp-controller="Login" asp-area="Student" class="login-form">
                     <div class="form-group">
                         <label asp-for="Email">Mail Adresi</label>
@@ -75,7 +75,7 @@
         </div>
     </div>
 
-      <!-- jquery-->
+    <!-- jquery-->
     <script src="/js/jquery-3.3.1.min.js"></script>
     <!-- Plugins js -->
     <script src="/js/plugins.js"></script>
@@ -91,7 +91,7 @@
     <script src="/js/jquery.waypoints.min.js"></script>
     <!-- Scroll Up Js -->
     <script src="/js/jquery.scrollUp.min.js"></script>
-        <!-- Full Calender Js -->
+    <!-- Full Calender Js -->
     <script src="/js/fullcalendar.min.js"></script>
     <!-- Chart Js -->
     <script src="/js/Chart.min.js"></script>

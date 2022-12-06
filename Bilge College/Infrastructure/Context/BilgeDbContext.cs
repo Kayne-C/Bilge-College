@@ -28,11 +28,11 @@ namespace Bilge_College.Infrastructure.Context
         public DbSet<SubSubjectClassroom> SubSubjectClassrooms { get; set; }
         public DbSet<SubSubjectTeacher> SubSubjectTeachers { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
-        public DbSet<TeacherClassroom> TeacherClasrooms { get; set; }
+        public DbSet<TeacherClassroom> TeacherClassrooms { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }
 }

@@ -21,22 +21,22 @@ namespace Bilge_College.Areas.Student.Controllers
             _mapper = mapper;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            //var list = await _studentRepository.GetByDefaults(x => x.Status != Status.Passive);
+            var list = await _studentRepository.GetByDefaults(x => x.Status != Status.Passive);
              return View();
         }
         [HttpPost]
         public async Task<IActionResult> Index(LoginStudentDTO loginStudentDTO)
         {
 
-                var response = await _studentRepository.GetByDefault(s => s.Email == loginStudentDTO.Email && s.Password == loginStudentDTO.Password);
+                var response = await _studentRepository.GetByDefault(s => s.Email == loginStudentDTO.Email && s.Password == loginStudentDTO.Password && 
+                s.Status != Status.Passive);
             if (response == null)
             {
-                ModelState.AddModelError("", "Girmiş olduğunuz bilgilerle eşleşen bir Öğrenci bulunamadı");
+                ModelState.AddModelError("", "Girmiş olduğunuz bilgilerle eşleşen bir öğrenci bulunamadı");
                 return View();
             }
-            //string FullName = response.FirstName + response.LastName;
             HttpContext.Session.SetString("userId", response.Id.ToString());
             HttpContext.Session.SetString("fullname", (response.FirstName + " " + response.LastName));
             HttpContext.Session.SetString("email", response.Email);

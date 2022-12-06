@@ -4,9 +4,9 @@ using Bilge_College.Models.Entities.Concrete;
 
 namespace Bilge_College.Infrastructure.Repositories.Concrete
 {
-    public class NoticeRepository : BaseRepository<Notice>, INoteRepository
+    public class StudentNoticeRepository : BaseRepository<StudentNotice>, IStudentNoticeRepository
     {
-        public NoticeRepository(BilgeDbContext bilgeDbContext) : base(bilgeDbContext)
+        public StudentNoticeRepository(BilgeDbContext bilgeDbContext) : base(bilgeDbContext)
         {
         }
     }
