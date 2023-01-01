@@ -27,12 +27,10 @@ namespace Bilge_College.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<string>("Duty")
                         .HasMaxLength(50)
@@ -66,7 +64,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("Id");
 
@@ -76,7 +74,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 21,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 524, DateTimeKind.Local).AddTicks(4413),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 33, DateTimeKind.Local).AddTicks(2371),
                             Duty = "Administrator",
                             Email = "chucklockwood@live.com",
                             FirstName = "Chuck",
@@ -88,7 +86,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 22,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 524, DateTimeKind.Local).AddTicks(5114),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 33, DateTimeKind.Local).AddTicks(3084),
                             Duty = "Co-Administrator",
                             Email = "samwinchester@live.com",
                             FirstName = "Sam",
@@ -100,7 +98,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 23,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 524, DateTimeKind.Local).AddTicks(5117),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 33, DateTimeKind.Local).AddTicks(3087),
                             Duty = "Co-Administrator",
                             Email = "deanwinchester@live.com",
                             FirstName = "Dean",
@@ -126,12 +124,10 @@ namespace Bilge_College.Migrations
                         .HasColumnType("Int");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("Grade")
                         .HasColumnType("INT");
@@ -140,7 +136,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("Id");
 
@@ -152,7 +148,7 @@ namespace Bilge_College.Migrations
                             Id = 24,
                             Branch = "A",
                             Capacity = 25,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 526, DateTimeKind.Local).AddTicks(9239),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 35, DateTimeKind.Local).AddTicks(6065),
                             Grade = 1,
                             Status = 1
                         },
@@ -161,7 +157,7 @@ namespace Bilge_College.Migrations
                             Id = 25,
                             Branch = "B",
                             Capacity = 25,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 526, DateTimeKind.Local).AddTicks(9566),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 35, DateTimeKind.Local).AddTicks(6386),
                             Grade = 1,
                             Status = 1
                         },
@@ -170,7 +166,7 @@ namespace Bilge_College.Migrations
                             Id = 26,
                             Branch = "C",
                             Capacity = 25,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 526, DateTimeKind.Local).AddTicks(9568),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 35, DateTimeKind.Local).AddTicks(6389),
                             Grade = 1,
                             Status = 1
                         });
@@ -184,12 +180,10 @@ namespace Bilge_College.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<string>("Duty")
                         .HasMaxLength(50)
@@ -223,7 +217,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("Id");
 
@@ -233,7 +227,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 27,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 528, DateTimeKind.Local).AddTicks(3117),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 36, DateTimeKind.Local).AddTicks(9345),
                             Duty = "Pirate",
                             Email = "jacksparrow@live.com",
                             FirstName = "Jack",
@@ -245,7 +239,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 28,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 528, DateTimeKind.Local).AddTicks(4196),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 37, DateTimeKind.Local).AddTicks(258),
                             Duty = "Maniac",
                             Email = "billylittle@live.com",
                             FirstName = "Billy",
@@ -257,7 +251,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 29,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 528, DateTimeKind.Local).AddTicks(4199),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 37, DateTimeKind.Local).AddTicks(262),
                             Duty = "Astronout",
                             Email = "buzzlightyear@live.com",
                             FirstName = "Buzz",
@@ -279,12 +273,10 @@ namespace Bilge_College.Migrations
                         .HasColumnType("Int");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("FirstExamScore")
                         .HasColumnType("Int");
@@ -302,7 +294,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("Id");
 
@@ -317,7 +309,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 30,
                             AvarageScore = 55,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 532, DateTimeKind.Local).AddTicks(720),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 40, DateTimeKind.Local).AddTicks(5457),
                             FirstExamScore = 60,
                             SchoolReportId = 45,
                             SecondExamScore = 50,
@@ -328,7 +320,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 31,
                             AvarageScore = 70,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 532, DateTimeKind.Local).AddTicks(1457),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 40, DateTimeKind.Local).AddTicks(6179),
                             FirstExamScore = 70,
                             SchoolReportId = 46,
                             SecondExamScore = 70,
@@ -339,7 +331,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 32,
                             AvarageScore = 80,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 532, DateTimeKind.Local).AddTicks(1460),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 40, DateTimeKind.Local).AddTicks(6182),
                             FirstExamScore = 80,
                             SchoolReportId = 47,
                             SecondExamScore = 80,
@@ -356,12 +348,10 @@ namespace Bilge_College.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -397,7 +387,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<string>("WorkPhone")
                         .IsRequired()
@@ -412,7 +402,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 33,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 533, DateTimeKind.Local).AddTicks(5565),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 41, DateTimeKind.Local).AddTicks(9325),
                             Email = "ezioauidotore@live.com",
                             FirstName = "Ezio",
                             HomeAddress = "NoAddress",
@@ -425,7 +415,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 34,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 533, DateTimeKind.Local).AddTicks(6678),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 42, DateTimeKind.Local).AddTicks(339),
                             Email = "altairniobe@live.com",
                             FirstName = "Altair",
                             HomeAddress = "NoAddress",
@@ -438,7 +428,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 35,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 533, DateTimeKind.Local).AddTicks(6681),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 42, DateTimeKind.Local).AddTicks(343),
                             Email = "ezioauidotore@live.com",
                             FirstName = "Claire",
                             HomeAddress = "NoAddress",
@@ -464,12 +454,10 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
@@ -480,7 +468,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("AdminId", "ParentId");
 
@@ -494,7 +482,7 @@ namespace Bilge_College.Migrations
                             AdminId = 21,
                             ParentId = 33,
                             Context = "This is a test message",
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 538, DateTimeKind.Local).AddTicks(9785),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 50, DateTimeKind.Local).AddTicks(5695),
                             Status = 1,
                             Title = "Hello"
                         },
@@ -503,7 +491,7 @@ namespace Bilge_College.Migrations
                             AdminId = 22,
                             ParentId = 34,
                             Context = "This is a test message2",
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 539, DateTimeKind.Local).AddTicks(454),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 50, DateTimeKind.Local).AddTicks(6359),
                             Status = 1,
                             Title = "Hello2"
                         },
@@ -512,7 +500,7 @@ namespace Bilge_College.Migrations
                             AdminId = 23,
                             ParentId = 35,
                             Context = "This is a test message3",
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 539, DateTimeKind.Local).AddTicks(457),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 50, DateTimeKind.Local).AddTicks(6362),
                             Status = 1,
                             Title = "Hello3"
                         });
@@ -527,12 +515,10 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -548,7 +534,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("AdminId", "ParentId");
 
@@ -561,7 +547,7 @@ namespace Bilge_College.Migrations
                         {
                             AdminId = 21,
                             ParentId = 33,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 540, DateTimeKind.Local).AddTicks(8642),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 52, DateTimeKind.Local).AddTicks(3656),
                             Description = "This is a test notice",
                             Status = 1,
                             Title = "Hello"
@@ -570,7 +556,7 @@ namespace Bilge_College.Migrations
                         {
                             AdminId = 22,
                             ParentId = 34,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 540, DateTimeKind.Local).AddTicks(9341),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 52, DateTimeKind.Local).AddTicks(4301),
                             Description = "This is a test notice2",
                             Status = 1,
                             Title = "Hello2"
@@ -579,7 +565,7 @@ namespace Bilge_College.Migrations
                         {
                             AdminId = 23,
                             ParentId = 35,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 540, DateTimeKind.Local).AddTicks(9344),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 52, DateTimeKind.Local).AddTicks(4304),
                             Description = "This is a test notice3",
                             Status = 1,
                             Title = "Hello3"
@@ -597,12 +583,10 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("Level")
                         .HasColumnType("INT");
@@ -619,7 +603,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("Id");
 
@@ -630,7 +614,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 42,
                             Capacity = 1222,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 542, DateTimeKind.Local).AddTicks(3231),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 53, DateTimeKind.Local).AddTicks(7384),
                             Level = 1,
                             Rate = 58,
                             SchoolName = "Testschool",
@@ -640,7 +624,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 43,
                             Capacity = 1244,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 542, DateTimeKind.Local).AddTicks(3862),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 53, DateTimeKind.Local).AddTicks(8000),
                             Level = 1,
                             Rate = 57,
                             SchoolName = "Testschool2",
@@ -650,7 +634,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 44,
                             Capacity = 1253,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 542, DateTimeKind.Local).AddTicks(3865),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 53, DateTimeKind.Local).AddTicks(8002),
                             Level = 2,
                             Rate = 67,
                             SchoolName = "Testschool3",
@@ -669,12 +653,10 @@ namespace Bilge_College.Migrations
                         .HasColumnType("Int");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
@@ -686,7 +668,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("Id");
 
@@ -699,7 +681,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 45,
                             AbsentDay = 5,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 543, DateTimeKind.Local).AddTicks(8824),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 55, DateTimeKind.Local).AddTicks(2216),
                             Status = 1,
                             StudentId = 48,
                             Term = 1
@@ -708,7 +690,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 46,
                             AbsentDay = 7,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 543, DateTimeKind.Local).AddTicks(9306),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 55, DateTimeKind.Local).AddTicks(2640),
                             Status = 1,
                             StudentId = 49,
                             Term = 1
@@ -717,7 +699,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 47,
                             AbsentDay = 9,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 543, DateTimeKind.Local).AddTicks(9309),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 55, DateTimeKind.Local).AddTicks(2643),
                             Status = 1,
                             StudentId = 50,
                             Term = 1
@@ -738,18 +720,16 @@ namespace Bilge_College.Migrations
                         .HasColumnType("Int");
 
                     b.Property<DateTime>("BirthDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("ClassroomId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -793,7 +773,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("Id");
 
@@ -811,7 +791,7 @@ namespace Bilge_College.Migrations
                             AvarageScore = 70,
                             BirthDate = new DateTime(1995, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ClassroomId = 24,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 546, DateTimeKind.Local).AddTicks(8374),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 57, DateTimeKind.Local).AddTicks(9736),
                             Email = "johnswear@live.com",
                             FirstName = "John",
                             Gender = 1,
@@ -830,7 +810,7 @@ namespace Bilge_College.Migrations
                             AvarageScore = 85,
                             BirthDate = new DateTime(1995, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ClassroomId = 25,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 547, DateTimeKind.Local).AddTicks(302),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 58, DateTimeKind.Local).AddTicks(1532),
                             Email = "callyswear@live.com",
                             FirstName = "Cally",
                             Gender = 1,
@@ -849,7 +829,7 @@ namespace Bilge_College.Migrations
                             AvarageScore = 90,
                             BirthDate = new DateTime(1990, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ClassroomId = 26,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 547, DateTimeKind.Local).AddTicks(306),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 58, DateTimeKind.Local).AddTicks(1536),
                             Email = "klausainzbell@live.com",
                             FirstName = "Klaus",
                             Gender = 1,
@@ -877,12 +857,10 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
@@ -893,7 +871,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("AdminId", "StudentId");
 
@@ -907,7 +885,7 @@ namespace Bilge_College.Migrations
                             AdminId = 21,
                             StudentId = 48,
                             Context = "This is a test message",
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 548, DateTimeKind.Local).AddTicks(8487),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 59, DateTimeKind.Local).AddTicks(8872),
                             Status = 1,
                             Title = "Hello"
                         },
@@ -916,7 +894,7 @@ namespace Bilge_College.Migrations
                             AdminId = 22,
                             StudentId = 49,
                             Context = "This is a test message2",
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 548, DateTimeKind.Local).AddTicks(9139),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 59, DateTimeKind.Local).AddTicks(9515),
                             Status = 1,
                             Title = "Hello2"
                         },
@@ -925,7 +903,7 @@ namespace Bilge_College.Migrations
                             AdminId = 23,
                             StudentId = 50,
                             Context = "This is a test message3",
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 548, DateTimeKind.Local).AddTicks(9142),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 59, DateTimeKind.Local).AddTicks(9518),
                             Status = 1,
                             Title = "Hello3"
                         });
@@ -933,19 +911,19 @@ namespace Bilge_College.Migrations
 
             modelBuilder.Entity("Bilge_College.Models.Entities.Concrete.StudentNotice", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.Property<int>("AdminId")
                         .HasColumnType("int");
 
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -955,15 +933,20 @@ namespace Bilge_College.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("INT");
 
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
-                    b.HasKey("AdminId", "StudentId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("AdminId");
 
                     b.HasIndex("StudentId");
 
@@ -972,29 +955,32 @@ namespace Bilge_College.Migrations
                     b.HasData(
                         new
                         {
+                            Id = 54,
                             AdminId = 21,
-                            StudentId = 48,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 550, DateTimeKind.Local).AddTicks(6386),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 61, DateTimeKind.Local).AddTicks(3965),
                             Description = "This is a test notice",
                             Status = 1,
+                            StudentId = 48,
                             Title = "Hello"
                         },
                         new
                         {
+                            Id = 55,
                             AdminId = 22,
-                            StudentId = 49,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 550, DateTimeKind.Local).AddTicks(7086),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 61, DateTimeKind.Local).AddTicks(4605),
                             Description = "This is a test notice2",
                             Status = 1,
+                            StudentId = 49,
                             Title = "Hello2"
                         },
                         new
                         {
+                            Id = 56,
                             AdminId = 23,
-                            StudentId = 50,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 550, DateTimeKind.Local).AddTicks(7089),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 61, DateTimeKind.Local).AddTicks(4607),
                             Description = "This is a test notice3",
                             Status = 1,
+                            StudentId = 50,
                             Title = "Hello3"
                         });
                 });
@@ -1008,18 +994,16 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("StudentId", "ParentId");
 
@@ -1032,21 +1016,21 @@ namespace Bilge_College.Migrations
                         {
                             StudentId = 48,
                             ParentId = 33,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 552, DateTimeKind.Local).AddTicks(2736),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 62, DateTimeKind.Local).AddTicks(9795),
                             Status = 1
                         },
                         new
                         {
                             StudentId = 49,
                             ParentId = 34,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 552, DateTimeKind.Local).AddTicks(3087),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 63, DateTimeKind.Local).AddTicks(143),
                             Status = 1
                         },
                         new
                         {
                             StudentId = 50,
                             ParentId = 35,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 552, DateTimeKind.Local).AddTicks(3090),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 63, DateTimeKind.Local).AddTicks(145),
                             Status = 1
                         });
                 });
@@ -1059,12 +1043,10 @@ namespace Bilge_College.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("Grade")
                         .HasColumnType("INT");
@@ -1084,7 +1066,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("WeeklyClassTime")
                         .HasColumnType("Int");
@@ -1099,7 +1081,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 60,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 556, DateTimeKind.Local).AddTicks(3588),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 66, DateTimeKind.Local).AddTicks(8656),
                             Grade = 1,
                             Status = 1,
                             SubSubjectCredit = 6,
@@ -1110,7 +1092,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 61,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 556, DateTimeKind.Local).AddTicks(4312),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 66, DateTimeKind.Local).AddTicks(9309),
                             Grade = 1,
                             Status = 1,
                             SubSubjectCredit = 5,
@@ -1121,7 +1103,7 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 62,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 556, DateTimeKind.Local).AddTicks(4315),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 66, DateTimeKind.Local).AddTicks(9312),
                             Grade = 1,
                             Status = 1,
                             SubSubjectCredit = 3,
@@ -1140,18 +1122,16 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("SubSubjectId", "ClassroomId");
 
@@ -1164,21 +1144,21 @@ namespace Bilge_College.Migrations
                         {
                             SubSubjectId = 60,
                             ClassroomId = 24,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 554, DateTimeKind.Local).AddTicks(8055),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 65, DateTimeKind.Local).AddTicks(3809),
                             Status = 1
                         },
                         new
                         {
                             SubSubjectId = 61,
                             ClassroomId = 25,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 554, DateTimeKind.Local).AddTicks(8412),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 65, DateTimeKind.Local).AddTicks(4162),
                             Status = 1
                         },
                         new
                         {
                             SubSubjectId = 62,
                             ClassroomId = 26,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 554, DateTimeKind.Local).AddTicks(8415),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 65, DateTimeKind.Local).AddTicks(4165),
                             Status = 1
                         });
                 });
@@ -1192,18 +1172,16 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("SubSubjectId", "TeacherId");
 
@@ -1216,21 +1194,21 @@ namespace Bilge_College.Migrations
                         {
                             SubSubjectId = 60,
                             TeacherId = 63,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 558, DateTimeKind.Local).AddTicks(14),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 68, DateTimeKind.Local).AddTicks(4434),
                             Status = 1
                         },
                         new
                         {
                             SubSubjectId = 61,
                             TeacherId = 64,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 558, DateTimeKind.Local).AddTicks(363),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 68, DateTimeKind.Local).AddTicks(4781),
                             Status = 1
                         },
                         new
                         {
                             SubSubjectId = 62,
                             TeacherId = 65,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 558, DateTimeKind.Local).AddTicks(366),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 68, DateTimeKind.Local).AddTicks(4783),
                             Status = 1
                         });
                 });
@@ -1243,12 +1221,10 @@ namespace Bilge_College.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
@@ -1259,7 +1235,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("Id");
 
@@ -1269,21 +1245,21 @@ namespace Bilge_College.Migrations
                         new
                         {
                             Id = 57,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 553, DateTimeKind.Local).AddTicks(1901),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 63, DateTimeKind.Local).AddTicks(8510),
                             Status = 1,
                             SubjectName = "Subject1"
                         },
                         new
                         {
                             Id = 58,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 553, DateTimeKind.Local).AddTicks(1905),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 63, DateTimeKind.Local).AddTicks(8515),
                             Status = 1,
                             SubjectName = "Subject2"
                         },
                         new
                         {
                             Id = 59,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 553, DateTimeKind.Local).AddTicks(1908),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 63, DateTimeKind.Local).AddTicks(8517),
                             Status = 1,
                             SubjectName = "Subject3"
                         });
@@ -1302,12 +1278,10 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<string>("Duty")
                         .HasMaxLength(50)
@@ -1341,7 +1315,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("Id");
 
@@ -1352,7 +1326,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 63,
                             Branch = "Math",
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 561, DateTimeKind.Local).AddTicks(1190),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 71, DateTimeKind.Local).AddTicks(3672),
                             Duty = "None",
                             Email = "williamjones@live.com",
                             FirstName = "William",
@@ -1365,7 +1339,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 64,
                             Branch = "Physics",
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 561, DateTimeKind.Local).AddTicks(2319),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 71, DateTimeKind.Local).AddTicks(4680),
                             Duty = "None",
                             Email = "moirabarret@live.com",
                             FirstName = "Moira",
@@ -1378,7 +1352,7 @@ namespace Bilge_College.Migrations
                         {
                             Id = 65,
                             Branch = "Biology",
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 561, DateTimeKind.Local).AddTicks(2322),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 71, DateTimeKind.Local).AddTicks(4683),
                             Duty = "None",
                             Email = "gabriellogan@live.com",
                             FirstName = "Gabriel",
@@ -1398,18 +1372,16 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)");
 
                     b.HasKey("ClassroomId", "TeacherId");
 
@@ -1422,21 +1394,21 @@ namespace Bilge_College.Migrations
                         {
                             ClassroomId = 24,
                             TeacherId = 63,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 559, DateTimeKind.Local).AddTicks(6255),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 69, DateTimeKind.Local).AddTicks(9864),
                             Status = 1
                         },
                         new
                         {
                             ClassroomId = 25,
                             TeacherId = 64,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 559, DateTimeKind.Local).AddTicks(6618),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 70, DateTimeKind.Local).AddTicks(212),
                             Status = 1
                         },
                         new
                         {
                             ClassroomId = 26,
                             TeacherId = 65,
-                            CreateDate = new DateTime(2022, 12, 6, 21, 2, 13, 559, DateTimeKind.Local).AddTicks(6621),
+                            CreateDate = new DateTime(2022, 12, 11, 21, 6, 36, 70, DateTimeKind.Local).AddTicks(215),
                             Status = 1
                         });
                 });

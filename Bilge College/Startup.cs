@@ -1,8 +1,10 @@
 using AutoMapper;
+using Bilge_College.Hubs;
 using Bilge_College.Infrastructure.Context;
 using Bilge_College.Infrastructure.Repositories.Concrete;
 using Bilge_College.Infrastructure.Repositories.Interfaces;
 using Bilge_College.Models.AutoMapper;
+using Microsoft.AspNet.SignalR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -63,7 +65,20 @@ namespace Bilge_College
             services.AddScoped<ISubSubjectTeacherRepository, SubSubjectTeacherRepository>();
             services.AddScoped<IClassroomRepository, ClassroomRepository>();
             services.AddScoped<ITeacherClassroomRepository, TeacherClassroomRepository>();
-            services.AddScoped<ITeacherRepository, TeacherRepository>();                      
+            services.AddScoped<ITeacherRepository, TeacherRepository>();
+            services.AddSignalR();
+            
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder =>
+                {
+                    builder.WithOrigins("https://localhost:5001", "https://localhost:53217").
+                     AllowAnyHeader().
+                     AllowAnyMethod().
+                     AllowCredentials();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -83,14 +98,16 @@ namespace Bilge_College
             app.UseStaticFiles();
 
             app.UseRouting();
+           
 
             app.UseAuthorization();
             app.UseSession();
-
+            app.UseCors("CorsPolicy");
             app.UseEndpoints(endpoints =>
             {
 
-            endpoints.MapControllerRoute(
+                endpoints.MapHub<TimeHub>("/TimeHub");
+                endpoints.MapControllerRoute(
                 name: "areaDefault",
                 pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 

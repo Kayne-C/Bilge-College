@@ -1,4 +1,5 @@
 ﻿using Bilge_College.Models.Entities.Concrete;
+using System;
 
 namespace Bilge_College.Models.DTOs.Note
 {
@@ -11,5 +12,7 @@ namespace Bilge_College.Models.DTOs.Note
         public int AvarageScore { get; set; }
         public int SchoolReportId { get; set; }
         public Entities.Concrete.SchoolReport SchoolReport { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public string TimeAgo { get; set; }
     }
 }

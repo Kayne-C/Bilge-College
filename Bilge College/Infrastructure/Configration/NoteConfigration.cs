@@ -10,9 +10,9 @@ namespace Bilge_College.Infrastructure.Configration
         public void Configure(EntityTypeBuilder<Note> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.CreateDate).IsRequired(true).HasColumnType("Date").HasDefaultValueSql("GetDate()");
-            builder.Property(x => x.UpdateDate).IsRequired(false).HasColumnType("Date");
-            builder.Property(x => x.DeleteDate).IsRequired(false).HasColumnType("Date");
+            builder.Property(x => x.CreateDate).IsRequired(true).HasColumnType("Datetime2(7)") ;
+            builder.Property(x => x.UpdateDate).IsRequired(false).HasColumnType("Datetime2(7)") ;
+            builder.Property(x => x.DeleteDate).IsRequired(false).HasColumnType("Datetime2(7)") ;
             builder.Property(x => x.Status).IsRequired(true).HasColumnType("INT");
             //---------------------------------------------------------------------------------------------------------   
 

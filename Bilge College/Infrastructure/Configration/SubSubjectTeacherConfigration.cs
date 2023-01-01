@@ -11,9 +11,9 @@ namespace Bilge_College.Infrastructure.Configration
         {
             builder.Ignore(x => x.Id);
             builder.HasKey(x => new { x.SubSubjectId, x.TeacherId });
-            builder.Property(x => x.CreateDate).IsRequired(true).HasColumnType("Date").HasDefaultValueSql("GetDate()");
-            builder.Property(x => x.UpdateDate).IsRequired(false).HasColumnType("Date");
-            builder.Property(x => x.DeleteDate).IsRequired(false).HasColumnType("Date");
+            builder.Property(x => x.CreateDate).IsRequired(true).HasColumnType("Datetime2(7)") ;
+            builder.Property(x => x.UpdateDate).IsRequired(false).HasColumnType("Datetime2(7)") ;
+            builder.Property(x => x.DeleteDate).IsRequired(false).HasColumnType("Datetime2(7)") ;
             builder.Property(x => x.Status).IsRequired(true).HasColumnType("INT");
             //---------------------------------------------------------------------------------------------------------
             builder.HasOne(x => x.SubSubject).WithMany(x => x.SubSubjectTeachers).HasForeignKey(x => x.SubSubjectId);

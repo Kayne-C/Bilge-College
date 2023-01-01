@@ -17,6 +17,31 @@
     {
       "library": "moment.js@2.29.4",
       "destination": "wwwroot/lib/moment.js/"
+    },
+    {
+      "library": "timeago.js@4.0.2",
+      "destination": "wwwroot/lib/timeago.js/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "signalr@2.4.3",
+      "destination": "wwwroot/js/signalr/",
+      "files": [
+        "jquery.signalR.js",
+        "jquery.signalR.min.js",
+        "LICENSE.md",
+        "package.json",
+        "README.md"
+      ]
+    },
+    {
+      "provider": "unpkg",
+      "library": "@microsoft/signalr@6.0.6",
+      "destination": "wwwroot/js/microsoft/signalr/",
+      "files": [
+        "dist/browser/signalr.js",
+        "dist/browser/signalr.min.js"
+      ]
     }
   ]
 }

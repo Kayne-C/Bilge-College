@@ -7,13 +7,12 @@ namespace Bilge_College.Models.Entities.Abstract
     public class BaseEntity
     {
         public int Id { get; set; }
-
-        private DateTime _createDate = DateTime.Now;
+  
         public DateTime CreateDate
         {
-            get => _createDate;
-            set => _createDate = value;
-        }
+            get;
+            set;
+        } = DateTime.Now;
         public DateTime? UpdateDate { get; set; }
         public DateTime? DeleteDate { get; set; }
         private Status _status = Status.Active;

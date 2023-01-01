@@ -20,6 +20,7 @@ using Bilge_College.Models.DTOs.SubSubjectTeacher;
 using Bilge_College.Models.DTOs.Teacher;
 using Bilge_College.Models.DTOs.Teacher.TeacherClassroom;
 using Bilge_College.Models.Entities.Concrete;
+using Bilge_College.Models.DTOs.Note;
 
 namespace Bilge_College.Models.AutoMapper
 {
@@ -36,6 +37,9 @@ namespace Bilge_College.Models.AutoMapper
             CreateMap<Inspector, AddInspectorDTO>().ReverseMap();
             CreateMap<Inspector, UpdateInspectorDTO>().ReverseMap();
 
+            CreateMap<Note, AddNoteDTO>().ReverseMap();
+            CreateMap<Note, UpdateNoteDTO>().ReverseMap();
+
             CreateMap<Parent, AddParentDTO>().ReverseMap();
             CreateMap<Parent, UpdateParentDTO>().ReverseMap();
 
@@ -47,8 +51,8 @@ namespace Bilge_College.Models.AutoMapper
             CreateMap<School, AddSchoolDTO>().ReverseMap();
             CreateMap<School, UpdateSchoolDTO>().ReverseMap();
 
-            CreateMap<SchoolReport, AddSchoolReportDTO>().ReverseMap();
-            CreateMap<SchoolReport, UpdateSchoolReportDTO>().ReverseMap();
+            //CreateMap<SchoolReport, AddSchoolReportDTO>().ReverseMap();
+            //CreateMap<SchoolReport, UpdateSchoolReportDTO>().ReverseMap();
 
             CreateMap<Student, AddStudentDTO>().ReverseMap();
             CreateMap<Student, UpdateStudentDTO>().ReverseMap();

@@ -30,11 +30,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<string>("Duty")
                         .HasMaxLength(50)
@@ -68,7 +68,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("Id");
 
@@ -129,11 +129,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("Grade")
                         .HasColumnType("INT");
@@ -142,7 +142,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("Id");
 
@@ -187,11 +187,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<string>("Duty")
                         .HasMaxLength(50)
@@ -225,7 +225,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("Id");
 
@@ -282,11 +282,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("FirstExamScore")
                         .HasColumnType("Int");
@@ -304,7 +304,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("Id");
 
@@ -359,11 +359,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -399,7 +399,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<string>("WorkPhone")
                         .IsRequired()
@@ -467,11 +467,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
@@ -482,7 +482,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("AdminId", "ParentId");
 
@@ -530,11 +530,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -550,7 +550,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("AdminId", "ParentId");
 
@@ -600,11 +600,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("Level")
                         .HasColumnType("INT");
@@ -621,7 +621,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("Id");
 
@@ -672,11 +672,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
@@ -688,7 +688,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("Id");
 
@@ -740,18 +740,18 @@ namespace Bilge_College.Migrations
                         .HasColumnType("Int");
 
                     b.Property<DateTime>("BirthDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("ClassroomId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -795,7 +795,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("Id");
 
@@ -880,11 +880,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
@@ -895,7 +895,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("AdminId", "StudentId");
 
@@ -943,11 +943,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -963,7 +963,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("AdminId", "StudentId");
 
@@ -1011,17 +1011,17 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("StudentId", "ParentId");
 
@@ -1062,11 +1062,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("Grade")
                         .HasColumnType("INT");
@@ -1086,7 +1086,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("WeeklyClassTime")
                         .HasColumnType("Int");
@@ -1143,17 +1143,17 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("SubSubjectId", "ClassroomId");
 
@@ -1195,17 +1195,17 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("SubSubjectId", "TeacherId");
 
@@ -1246,11 +1246,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
@@ -1261,7 +1261,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("NVARCHAR(50)");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("Id");
 
@@ -1305,11 +1305,11 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<string>("Duty")
                         .HasMaxLength(50)
@@ -1343,7 +1343,7 @@ namespace Bilge_College.Migrations
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("Id");
 
@@ -1401,17 +1401,17 @@ namespace Bilge_College.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("Date")
-                        .HasDefaultValueSql("GetDate()");
+                        .HasColumnType("Datetime2(7)") 
+                        ;
 
                     b.Property<DateTime?>("DeleteDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.Property<int>("Status")
                         .HasColumnType("INT");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .HasColumnType("Date");
+                        .HasColumnType("Datetime2(7)") ;
 
                     b.HasKey("ClassroomId", "TeacherId");
 

@@ -1,4 +1,5 @@
 ﻿using Bilge_College.Models.Entities.Abstract;
+using System;
 using System.Collections.Generic;
 
 namespace Bilge_College.Models.Entities.Concrete

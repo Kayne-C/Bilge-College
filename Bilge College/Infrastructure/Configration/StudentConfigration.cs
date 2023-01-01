@@ -10,15 +10,15 @@ namespace Bilge_College.Infrastructure.Configration
         public void Configure(EntityTypeBuilder<Student> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.CreateDate).IsRequired(true).HasColumnType("Date").HasDefaultValueSql("GetDate()");
-            builder.Property(x => x.UpdateDate).IsRequired(false).HasColumnType("Date");
-            builder.Property(x => x.DeleteDate).IsRequired(false).HasColumnType("Date");
+            builder.Property(x => x.CreateDate).IsRequired(true).HasColumnType("Datetime2(7)");
+            builder.Property(x => x.UpdateDate).IsRequired(false).HasColumnType("Datetime2(7)") ;
+            builder.Property(x => x.DeleteDate).IsRequired(false).HasColumnType("Datetime2(7)") ;
             builder.Property(x => x.Status).IsRequired(true).HasColumnType("INT");
             //---------------------------------------------------------------------------------------------------------
             builder.Property(x => x.SchoolNumber).IsRequired(true).HasColumnType("NVARCHAR").HasMaxLength(50);
             builder.Property(x => x.FirstName).IsRequired(true).HasColumnType("NVARCHAR").HasMaxLength(50);
             builder.Property(x => x.LastName).IsRequired(true).HasColumnType("NVARCHAR").HasMaxLength(50);
-            builder.Property(x => x.BirthDate).IsRequired(true).HasColumnType("Date");
+            builder.Property(x => x.BirthDate).IsRequired(true).HasColumnType("Datetime2(7)") ;
             builder.Property(x => x.Gender).IsRequired(true).HasColumnType("INT");
             builder.Property(x => x.Email).IsRequired(true).HasColumnType("NVARCHAR").HasMaxLength(50);
             builder.Property(x => x.Password).IsRequired(true).HasColumnType("NVARCHAR").HasMaxLength(50);

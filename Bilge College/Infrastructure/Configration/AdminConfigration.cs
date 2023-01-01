@@ -11,9 +11,9 @@ namespace Bilge_College.Infrastructure.Configration
         public void Configure(EntityTypeBuilder<Admin> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.CreateDate).IsRequired(true).HasColumnType("Date").HasDefaultValueSql("GetDate()");
-            builder.Property(x => x.UpdateDate).HasColumnType("Date");
-            builder.Property(x => x.DeleteDate).HasColumnType("Date");
+            builder.Property(x => x.CreateDate).IsRequired(true).HasColumnType("Datetime2(7)") ;
+            builder.Property(x => x.UpdateDate).HasColumnType("Datetime2(7)") ;
+            builder.Property(x => x.DeleteDate).HasColumnType("Datetime2(7)") ;
             builder.Property(x => x.Status).IsRequired(true).HasColumnType("INT");
             //---------------------------------------------------------------------------------------------------------
             builder.Property(x => x.FirstName).IsRequired(true).HasColumnType("NVARCHAR").HasMaxLength(50);
