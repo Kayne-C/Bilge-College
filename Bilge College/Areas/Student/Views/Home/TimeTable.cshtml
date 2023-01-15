@@ -1,0 +1,123 @@
+﻿@using Bilge_College.Models.DTOs.Note
+@model List<AddNoteDTO>
+@{
+    ViewData["Title"] = "Time Table";
+    Layout = "~/Areas/Student/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row">
+
+    <div class="col-12-xxxl col-12">
+        <div class="card height-auto">
+            <div class="card-body">
+                <div class="heading-layout1">
+                    <div class="item-title">
+                        <h3>Ders Programı</h3>
+                    </div>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                           aria-expanded="false">...</a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-redo-alt text-orange-peel"></i>Refresh
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <form id="searchForm" class="mg-b-20">
+                    <div class="row gutters-8">
+                        <div class="col-lg-5 col-12 form-group">
+                            <input type="text" id="SearchByDay" placeholder="Gün İle Arama ..." class="form-control">
+                        </div>
+                        <div class="col-lg-5 col-12 form-group">
+                            <input type="text" id="SearchBySubject" placeholder="Ders İle Arama ..." class="form-control">
+                        </div>
+                        <div class="col-lg-2 col-12 form-group">
+                            <button type="submit"
+                                    class="fw-btn-fill btn-gradient-yellow">
+                                Ara
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="table-responsive" id="TableList">
+                    <table class="table display data-table text-nowrap">
+                        <thead>
+                            <tr>
+                                <th>Gün</th>
+                                <th>Ders Adı</th>
+                                <th>Ders Öğretmeni</th>
+                                <th>Ders Saati</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <th>Pazartesi</th>
+                                <td>Accounting</td>
+                                <td>Mike John</td>
+                                <td>10.00 am-11.00 am</td>
+                            </tr>
+                            <tr>
+                                <th>Salı</th>
+                                <td>English</td>
+                                <td>Adam John</td>
+                                <td>10.00 am-11.00 am</td>
+                            </tr>
+                            <tr>
+                                <th>Çarşamba</th>
+                                <td>Economics</td>
+                                <td>Johanthon Ray</td>
+                                <td>10.00 am-11.00 am</td>
+                            </tr>
+                            <tr>
+                                <th>Perşembe</th>
+                                <td>Drawing</td>
+                                <td>Mike Jonas</td>
+                                <td>10.00 am-11.00 am</td>
+                            </tr>
+                            <tr>
+                                <th>Cuma</th>
+                                <td>English</td>
+                                <td>Kate Well</td>
+                                <td>10.00 am-11.00 am</td>
+                            </tr>
+                            <tr>
+                                <th>Cumartesi</th>
+                                <td>Chemistry</td>
+                                <td>Mike John</td>
+                                <td>10.00 am-11.00 am</td>
+                            </tr>
+                            <tr>
+                                <th>Pazar</th>
+                                <td>English</td>
+                                <td>Mike John</td>
+                                <td>10.00 am-11.00 am</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('searchForm').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+
+        var searchTerm = document.getElementById('SearchByDay').value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/student/home/timetable/searchbyday');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+
+            }
+        };
+        xhr.send(JSON.stringify({ searchTerm: searchTerm }));
+    });
+</script>

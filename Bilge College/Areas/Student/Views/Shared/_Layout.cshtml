@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.png">
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="~/css/normalize.css">
     <!-- Main CSS -->
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="~/css/fullcalendar.min.css">
     <!-- Animate CSS -->
     <link rel="stylesheet" href="~/css/animate.min.css">
-        <!-- Select 2 CSS -->
+    <!-- Select 2 CSS -->
     <link rel="stylesheet" href="~/css/select2.min.css">
     <!-- Data Table CSS -->
     <link rel="stylesheet" href="~/css/jquery.dataTables.min.css">
@@ -198,7 +198,14 @@
                                 <span>Student</span>
                             </div>
                             <div class="admin-img">
-                                <img src="/ProfileImages/test.jpg" alt="Photo">
+                                @if (Context.Session.GetString("HomeImage") == null)
+                                    {
+                                        <img src="/img/figure/student11.png" alt="Photo">
+                                    }
+                                    else
+                                    {
+                                        <img src="@Context.Session.GetString("HomeImage")" alt="Photo">
+                                    }  
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -244,7 +251,7 @@
                                     <a asp-action="Notes" class="nav-link"><i class="flaticon-open-book"></i>Notlarım</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="index4.html" class="nav-link"><i class="flaticon-calendar"></i>Ders Programı</a>
+                                    <a asp-action="TimeTable" class="nav-link"><i class="flaticon-calendar"></i>Ders Programı</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="index5.html" class="nav-link"><i class="flaticon-checklist"></i>Devamsızlık Durumu</a>

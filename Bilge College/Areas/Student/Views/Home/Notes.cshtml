@@ -9,16 +9,13 @@
 <div class="col-lg-12">
     <div class="card dashboard-card-eleven">
         <div class="card-body">
-            <div class="col-4-xxxl col-lg-4 col-4 form-group">
-                <h3>Dönem Seçimi</h3>
-                <select class="select2">
-                    <option value="">Aradığınız Dönemi Seçiniz.</option>
-                    @foreach (var SchoolReport in Model)
-                    {
-                        <option value="@Convert.ToInt32(SchoolReport.Term)">@Convert.ToInt32(SchoolReport.Term)<p>.Dönem</p></option>
-                    }
-                </select>
-            </div>
+            <h3>Dönem Seçimi</h3>
+            <select  id="SelectedTerm">
+                @foreach (var SchoolReport in Model)
+                {
+                    <option value="@Convert.ToInt32(SchoolReport.Term)">@Convert.ToInt32(SchoolReport.Term)<p>.Dönem</p></option>
+                }
+            </select>
             <div class="heading-layout1">
 
                 <div class="item-title">
@@ -38,33 +35,27 @@
             <div class="table-box-wrap">
                 <form class="search-form-box">
                 </form>
-                <div class="table-responsive result-table-box">
-                    <table class="table display data-table text-nowrap">
-                        <thead>
-                            <tr>
-                                <th>Ders Adı</th>
-                                <th>1.Sınav Notu</th>
-                                <th>2.Sınav Notu</th>
-                                <th>Not Ortalaması</th>
-                                <th>Sonuç Tarihi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var SchoolReport in )
-                            {
-                                <tr>
-@*                                    <td>@Sc.Notes.SubSubjectsName</td>
-                                    <td>@item.FirstExamScore</td>
-                                    <td>@item.SecondExamScore</td>
-                                    <td>@item.AvarageScore</td>
-                                    <td>@item.TimeAgo önce girildi</td>*@
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
+                <div class="table-responsive result-table-box" id="test">
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="~/js/jquery-3.3.1.min.js"></script>
+<script>
+    
+    $("#SelectedTerm").change(function() {
+        $.ajax({
+                url: '/Student/Home/GetNotes',
+                type: 'POST',
+                dataType: 'html',
+                success: function (data) {
+                    $("#test").html(data);
+                },
+                error: function () {
+                    alert("Hata alındı.");
+                }
+            });
+    })
+</script>
 

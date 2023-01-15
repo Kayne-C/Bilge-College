@@ -14,6 +14,7 @@ namespace Bilge_College.Models.Entities.Concrete
         public IFormFile UploadImage { get; set; }
         public string Branch { get; set; }
         public string Duty { get; set; }
+        public ICollection<SubSubjectClassroom> SubSubjectClassrooms { get; set; }
         public ICollection<TeacherClassroom> TeacherClassrooms { get; set; }
         public ICollection<SubSubjectTeacher> SubSubjectTeachers { get; set; }
 

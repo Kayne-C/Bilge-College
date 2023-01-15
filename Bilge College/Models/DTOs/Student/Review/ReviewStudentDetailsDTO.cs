@@ -1,5 +1,4 @@
-﻿using Bilge_College.Models.Entities.Concrete;
-using System;
+﻿using System;
 
 namespace Bilge_College.Models.DTOs.Student.Review
 {
@@ -17,7 +16,7 @@ namespace Bilge_College.Models.DTOs.Student.Review
         public int ClassroomId { get; set; }
         public char Branch { get; set; }
         public Entities.Concrete.Classroom Classroom { get; set; }
-        public int? SchoolId { get; set; }
+        public int SchoolId { get; set; }
         public Entities.Concrete.School School { get; set; }
         public int AvarageScore { get; set; }
     }

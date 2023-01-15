@@ -17,9 +17,21 @@ namespace Bilge_College.Infrastructure.Repositories.Concrete
             _bilgeDbContext = bilgeDbContext;
         }
 
+        public async Task<dynamic> NotesQueryForTimeTable(string StudentId)
+        {
+            var query = _bilgeDbContext.Notes.Where(x => x.SchoolReport.StudentId.ToString() == StudentId && x.SchoolReport.Status == Status.Active).Include(x => x.SubSubject).AsQueryable();
+            return await query.ToListAsync();
+        }
+
         public async Task<dynamic> NotesQuery(string StudentId)
         {
             var query = _bilgeDbContext.SchoolReports.Where(x => x.StudentId.ToString() == StudentId).Where(x => x.Status == Status.Active).Include(x => x.Student).Include(x => x.Notes).ThenInclude(x => x.SubSubject).AsQueryable();
+            return await query.ToListAsync();
+        }
+
+        public async Task<dynamic> NotesQuery2(int donemId,string StudentId)
+        {
+            var query = _bilgeDbContext.SchoolReports.Where(x => ((int)x.Term) == donemId).Where(x => x.StudentId.ToString() == StudentId).Include(x => x.Student).Include(x => x.Notes).ThenInclude(x => x.SubSubject).AsQueryable();
             return await query.ToListAsync();
         }
     }

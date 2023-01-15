@@ -1,0 +1,31 @@
+﻿@model dynamic
+
+<table class="table display data-table text-nowrap">
+    <thead>
+        <tr>
+            <th>Ders Adı</th>
+            <th>1.Sınav Notu</th>
+            <th>2.Sınav Notu</th>
+            <th>Not Ortalaması</th>
+            <th>Sonuç Tarihi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var SchoolReport in Model)
+            {
+                foreach (var Note in SchoolReport.Notes)
+                {
+                    <tr>
+                        <td>@Note.SubSubject.SubSubjectsName</td>
+                        <td>@Note.FirstExamScore</td>
+                        <td>@Note.SecondExamScore</td>
+                        <td>@Note.AvarageScore</td>
+                        <td>@Note.TimeAgo önce girildi</td>
+                    </tr>
+                }
+
+            }
+        }
+    </tbody>
+</table>

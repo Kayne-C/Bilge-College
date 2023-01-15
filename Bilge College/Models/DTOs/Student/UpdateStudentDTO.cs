@@ -1,8 +1,6 @@
-﻿using Bilge_College.Models.DTOs.Student.Review;
-using Bilge_College.Models.Entities.Concrete;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+
 
 namespace Bilge_College.Models.DTOs.Student
 {

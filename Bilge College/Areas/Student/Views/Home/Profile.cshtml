@@ -21,11 +21,24 @@
                         </div>
                         <div class="single-info-details">
                             <div class="item-img">
-                                <img src="/img/figure/student1.jpg" alt="student">
+                                 @if (Context.Session.GetString("ProfileImage") == null)
+                                    {
+                                        <img src="/img/figure/student.jpg" alt="Student">
+                                    }
+                                    else
+                                    {
+                                        <img src="@Context.Session.GetString("ProfileImage")" alt="Photo">
+                                    }  
                             </div>
+
                             <div class="item-content">
                                 <div class="header-inline item-header">
                                     <h3 class="text-dark-medium font-medium">Hakkımda</h3>
+                                    <div class="header-elements">
+                                        <ul>
+                                            <li><a asp-action="EditProfile"><i class="far fa-edit"></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="info-table table-responsive">
                                     <table class="table text-nowrap">

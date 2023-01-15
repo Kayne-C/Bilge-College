@@ -50,6 +50,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,10 +59,10 @@
     <Folder Include="Areas\Inspector\Models\" />
     <Folder Include="Areas\Inspector\Views\" />
     <Folder Include="Areas\Student\Data\" />
-    <Folder Include="Areas\Teacher\Controllers\" />
-    <Folder Include="Areas\Teacher\Data\" />
-    <Folder Include="Areas\Teacher\Models\" />
-    <Folder Include="Areas\Teacher\Views\" />
+    <Folder Include="Areas\Student\Views\Teacher\Controllers\" />
+    <Folder Include="Areas\Student\Views\Teacher\Data\" />
+    <Folder Include="Areas\Student\Views\Teacher\Models\" />
+    <Folder Include="Areas\Student\Views\Teacher\Views\" />
     <Folder Include="Models\ViewModels\" />
   </ItemGroup>
 

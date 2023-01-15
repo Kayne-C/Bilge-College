@@ -53,7 +53,19 @@ namespace Bilge_College.Infrastructure.Configration
                     StudentId = 50,
                     Term = (Term)1,
                     AbsentDay = 9,
-                    });      
+                },
+
+                new SchoolReport()
+                {
+                    Id = 48,
+                    CreateDate = DateTime.Now,
+                    UpdateDate = null,
+                    DeleteDate = null,
+                    Status = (Models.Entities.Abstract.Status)3,
+                    StudentId = 49,
+                    Term = (Term)2,
+                    AbsentDay = 9,
+                });      
         }
 }
 }

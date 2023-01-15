@@ -1,0 +1,44 @@
+﻿@model
+@{
+    ViewData["Title"] = "EditProfile";
+    Layout = "~/Areas/Student/Views/Shared/_Layout.cshtml";
+}
+
+<div class="breadcrumbs-area">
+    <h3>Profili Düzenle</h3>
+    <ul>
+        <li>
+            <a asp-action="Index">Anasayfa</a>
+        </li>
+        <li>Profili Düzenle</li>
+    </ul>
+</div>
+<div class="card height-auto">
+    <div class="card-body">
+        <div class="heading-layout1">
+            <div class="item-title">
+            </div>
+        </div>
+        <form class="new-added-form">
+            <div class="row">
+                <div class="col-lg-3 col-12 form-group">
+                    <label>Eski Şifre</label>
+                    <input type="text" placeholder="Eski Şifrenizi Giriniz" class="form-control">
+                </div>
+                 <div class="col-lg-3 col-12 form-group">
+                    <label>Yeni Şifre</label>
+                    <input type="text" placeholder="Yeni Şifrenizi Giriniz" class="form-control">
+                </div>
+
+                <div class="col-lg-3 col-12 form-group mg-t-20">
+                    <label class="text-dark-medium">Profil Fotoğrafı (280px X 330px)</label>
+                    <input type="file" class="form-control-file">
+                </div>
+                <div class="col-3 form-group mg-t-20">
+                    <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Kaydet</button>
+                    <button type="reset" class="btn-fill-lg bg-blue-dark btn-hover-yellow">GeriAl</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

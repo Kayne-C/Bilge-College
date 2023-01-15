@@ -37,9 +37,12 @@ namespace Bilge_College.Areas.Student.Controllers
                 ModelState.AddModelError("", "Girmiş olduğunuz bilgilerle eşleşen bir öğrenci bulunamadı");
                 return View();
             }
+
             HttpContext.Session.SetString("userId", response.Id.ToString());
             HttpContext.Session.SetString("fullname", (response.FirstName + " " + response.LastName));
             HttpContext.Session.SetString("email", response.Email);
+            HttpContext.Session.SetString("classroomid", response.ClassroomId.ToString());
+            HttpContext.Session.SetString("ProfileImage", response.Image);
             return RedirectToAction("Index", "Home"); 
         }
     }

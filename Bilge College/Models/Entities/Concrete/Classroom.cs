@@ -15,5 +15,6 @@ namespace Bilge_College.Models.Entities.Concrete
         public ICollection<Student> Students { get; set; }
         public ICollection<TeacherClassroom> TeacherClassrooms { get; set; }
         public ICollection<SubSubjectClassroom> SubSubjectClassrooms { get; set; }
+
     }
 }
